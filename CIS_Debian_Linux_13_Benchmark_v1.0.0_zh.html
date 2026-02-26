@@ -682,7 +682,7 @@ install cramfs /bin/false</code></pre></div>
 <pre><code># printf &#x27;%s\n&#x27; &quot;&quot; &quot;install cramfs /bin/false&quot; &gt;&gt; /etc/modprobe.d/60-</code></pre>
 <p>cramfs.conf</p>
 <p>创建一个以 .conf 结尾的文件，包含 blacklist cramfs 在 /etc/modprobe.d/</p>
-<p>目录中。</p>
+<p>目录。</p>
 <p>示例：</p>
 <pre><code># printf &#x27;%s\n&#x27; &quot;&quot; &quot;blacklist cramfs&quot; &gt;&gt; /etc/modprobe.d/60-cramfs.conf</code></pre></div>
   </div>
@@ -792,7 +792,7 @@ install freevxfs /bin/false</code></pre></div>
 <pre><code># printf &#x27;%s\n&#x27; &quot;&quot; &quot;install freevxfs /bin/false&quot; &gt;&gt; /etc/modprobe.d/60-</code></pre>
 <p>freevxfs.conf</p>
 <p>创建一个以 .conf 结尾的文件，包含 blacklist freevxfs 在 /etc/modprobe.d/</p>
-<p>目录中。</p>
+<p>目录。</p>
 <p>示例：</p>
 <pre><code># printf &#x27;%s\n&#x27; &quot;&quot; &quot;blacklist freevxfs&quot; &gt;&gt; /etc/modprobe.d/60-freevxfs.conf</code></pre></div>
   </div>
@@ -848,7 +848,7 @@ install freevxfs /bin/false</code></pre></div>
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>验证 hfs 内核模块在系统上不可用或已被禁用。</p>
 <p class="step">1. 运行以下脚本来确定 hfs 内核模块是否在 the</p>
-<p>system:</p>
+<p>系统：</p>
 <pre><code>#!/usr/bin/env bash 
  
 { 
@@ -865,7 +865,7 @@ install freevxfs /bin/false</code></pre></div>
 <p>无需进一步的审计步骤。</p>
 <p>注意：某些系统可能将 hfs 文件系统包含在内核中，而不是 to</p>
 <p>being available as a 内核模块. In this case, the above audit will not return anything.</p>
-<p>This is also considered a passing state.</p>
+<p>这也被视为通过状态。</p>
 <p>如果上述脚本有返回内容：</p>
 <p class="step">2. Verify the hfs 内核模块未加载 and not loadable by performing the</p>
 <p>以下操作：</p>
@@ -892,7 +892,7 @@ install hfs /bin/false</code></pre></div>
 rmmod hfs 2&gt;/dev/null</code></pre>
 <p class="step">2. 执行以下操作来禁用 hfs 内核模块：</p>
 <p>创建一个以 .conf 结尾的文件，包含 install hfs /bin/false 在 /etc/modprobe.d/</p>
-<p>目录中。</p>
+<p>目录。</p>
 <p>示例：</p>
 <pre><code># printf &#x27;%s\n&#x27; &quot;&quot; &quot;install hfs /bin/false&quot; &gt;&gt; /etc/modprobe.d/60-hfs.conf</code></pre>
 <p>创建一个以 .conf 结尾的文件，包含 blacklist hfs 在 /etc/modprobe.d/ directory.</p>
@@ -1000,7 +1000,7 @@ install hfsplus /bin/false</code></pre></div>
 <pre><code># printf &#x27;%s\n&#x27; &quot;&quot; &quot;install hfsplus /bin/false&quot; &gt;&gt; /etc/modprobe.d/60-</code></pre>
 <p>hfsplus.conf</p>
 <p>创建一个以 .conf 结尾的文件，包含 blacklist hfsplus 在 /etc/modprobe.d/</p>
-<p>目录中。</p>
+<p>目录。</p>
 <p>示例：</p>
 <pre><code># printf &#x27;%s\n&#x27; &quot;&quot; &quot;blacklist hfsplus&quot; &gt;&gt; /etc/modprobe.d/60-hfsplus.conf</code></pre></div>
   </div>
@@ -1077,7 +1077,7 @@ install hfsplus /bin/false</code></pre></div>
 <p>无需进一步的审计步骤。</p>
 <p>注意：某些系统可能将 jffs2 文件系统包含在内核中，而不是 to</p>
 <p>being available as a 内核模块. In this case, the above audit will not return anything.</p>
-<p>This is also considered a passing state.</p>
+<p>这也被视为通过状态。</p>
 <p>如果上述脚本有返回内容：</p>
 <p class="step">2. Verify the jffs2 内核模块未加载 and not loadable by performing the</p>
 <p>以下操作：</p>
@@ -1109,7 +1109,7 @@ install jffs2 /bin/false</code></pre></div>
 <pre><code># printf &#x27;%s\n&#x27; &quot;&quot; &quot;install jffs2 /bin/false&quot; &gt;&gt; /etc/modprobe.d/60-</code></pre>
 <p>jffs2.conf</p>
 <p>创建一个以 .conf 结尾的文件，包含 blacklist jffs2 在 /etc/modprobe.d/</p>
-<p>目录中。</p>
+<p>目录。</p>
 <p>示例：</p>
 <pre><code># printf &#x27;%s\n&#x27; &quot;&quot; &quot;blacklist jffs2&quot; &gt;&gt; /etc/modprobe.d/60-jffs2.conf</code></pre></div>
   </div>
@@ -1163,7 +1163,7 @@ install jffs2 /bin/false</code></pre></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
-    <div class="part-content"><p>The overlay 内核模块 has known CVE&#x27;s: CVE-2023-32629, CVE-2023-2640, and</p>
+    <div class="part-content"><p>The overlay 内核模块 has known CVE's: CVE-2023-32629, CVE-2023-2640, and</p>
 <p>CVE-2023-0386. Disabling the overlay 内核模块 reduces the local attack surface</p>
 <p>by removing support for unnecessary filesystem types and mitigates potential risks</p>
 <p>associated with unauthorized execution of setuid files, enhancing the overall system</p>
@@ -1350,7 +1350,7 @@ install squashfs /bin/false</code></pre></div>
 <pre><code># printf &#x27;%s\n&#x27; &quot;&quot; &quot;install squashfs /bin/false&quot; &gt;&gt; /etc/modprobe.d/60-</code></pre>
 <p>squashfs.conf</p>
 <p>创建一个以 .conf 结尾的文件，包含 blacklist squashfs 在 /etc/modprobe.d/</p>
-<p>目录中。</p>
+<p>目录。</p>
 <p>示例：</p>
 <pre><code># printf &#x27;%s\n&#x27; &quot;&quot; &quot;blacklist squashfs&quot; &gt;&gt; /etc/modprobe.d/60-squashfs.conf</code></pre></div>
   </div>
@@ -1414,7 +1414,7 @@ install squashfs /bin/false</code></pre></div>
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>验证 udf 内核模块在系统上不可用或已被禁用。</p>
 <p class="step">1. 运行以下脚本来确定 udf 内核模块是否在 the</p>
-<p>system:</p>
+<p>系统：</p>
 <pre><code>#!/usr/bin/env bash 
  
 { 
@@ -1431,7 +1431,7 @@ install squashfs /bin/false</code></pre></div>
 <p>无需进一步的审计步骤。</p>
 <p>注意：某些系统可能将 udf 文件系统包含在内核中，而不是 to</p>
 <p>being available as a 内核模块. In this case, the above audit will not return anything.</p>
-<p>This is also considered a passing state.</p>
+<p>这也被视为通过状态。</p>
 <p>如果上述脚本有返回内容：</p>
 <p class="step">2. Verify the udf 内核模块未加载 and not loadable by performing the</p>
 <p>以下操作：</p>
@@ -1797,7 +1797,7 @@ install usb_storage /bin/false</code></pre></div>
     <div class="part-content"><p>Verify filesystem 内核模块s that are not in use on the system are disabled. Review</p>
 <p>currently loaded 内核模块s to ensure they are needed and conform to local site</p>
 <p>policy.</p>
-<p>Note: The &quot;Audit script&quot; included at the bottom of the &quot;Audit Procedure&quot; will perform the</p>
+<p>注意：包含在"审计过程"底部的"审计脚本"将执行</p>
 <p>以下步骤。</p>
 <p class="step">1. Run the following command to generate a list of filesystem types currently</p>
 <pre><code>mounted on the system.</code></pre>
@@ -2089,7 +2089,7 @@ readlink -f /lib/modules/**/kernel/$l_mod_type)&quot;</code></pre>
   <div class="rec-part">
     <h4 class="part-label">影响</h4>
     <div class="part-content"><p>By design files saved to /tmp should have no expectation of surviving a reboot of the</p>
-<p>system. tmpfs is ram based and all files stored to tmpfs will be lost when the system is</p>
+<p>系统。 tmpfs is ram based and all files stored to tmpfs will be lost when the system is</p>
 <p>rebooted.</p>
 <p>If files need to be persistent through a reboot, they should be saved to /var/tmp not</p>
 <p>/tmp.</p>
@@ -2692,7 +2692,7 @@ readlink -f /lib/modules/**/kernel/$l_mod_type)&quot;</code></pre>
     <h4 class="part-label">理由</h4>
     <div class="part-content"><p>Setting this option on a file system prevents users from executing programs from shared</p>
 <p>memory. This deters users from introducing potentially malicious software on the</p>
-<p>system.</p></div>
+<p>系统。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
@@ -3880,7 +3880,7 @@ readlink -f /lib/modules/**/kernel/$l_mod_type)&quot;</code></pre>
 <p>the disk is full. See man auditd.conf for details.</p>
 <p>Configuring /var/log/audit as its own file system allows an administrator to set</p>
 <p>additional mount options such as noexec/nosuid/nodev. These options limit an</p>
-<p>attacker&#x27;s ability to create exploits on the system. 其他 options allow for specific</p>
+<p>attacker's ability to create exploits on the system. 其他 options allow for specific</p>
 <p>behavior. See man mount for exact details regarding filesystem-independent and</p>
 <pre><code>filesystem-specific options.</code></pre>
 <p>As /var/log/audit contains audit logs, care should be taken to ensure the security</p>
@@ -7762,7 +7762,7 @@ l_value=&quot;(1|2|3)&quot;
     <div class="part-content"><p>A core dump includes a memory image taken at the time the operating system</p>
 <p>terminates an application. The memory image could contain sensitive data and is</p>
 <p>generally useful only for developers trying to debug problems, increasing the risk to the</p>
-<p>system.</p></div>
+<p>系统。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">影响</h4>
@@ -8889,7 +8889,7 @@ cut -d= -f2 | sed -e &#x27;s/&quot;//g&#x27;)\b)&quot; &quot;$l_file&quot;; then
 <p>To lock down a dconf key or subpath, create a locks subdirectory at</p>
 <p>/etc/dconf/db/local.d/locks/. The files inside this directory contain a list of keys</p>
 <p>or subpaths to lock. Just as with the keyfiles, you may add any number of files to this</p>
-<p>目录中。</p></div>
+<p>目录。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -9790,7 +9790,7 @@ grep &#x27;^active&#x27;</code></pre>
     <div class="part-content"><p>可能存在依赖于 kea package. If the kea package is</p>
 <p>removed, these dependent packages will be removed as well. Before removing the kea</p>
 <p>package, 请检查所有依赖的软件包以确定它们是否 required on the</p>
-<p>system.</p>
+<p>系统。</p>
 <li>如果需要依赖软件包： stop and mask the kea-dhcp-ddns-</li>
 <p>server.service kea-dhcp4-server.service and kea-dhcp6-server.service</p>
 <p>leaving the kea package installed.</p></div>
@@ -10531,7 +10531,7 @@ grep &#x27;^active&#x27;</code></pre>
 <p>可能存在依赖于 cups package. If the cups package</p>
 <p>is removed, these dependent packages will be removed as well. Before removing the</p>
 <p>cups package, 请检查所有依赖的软件包以确定它们是否 required on the</p>
-<p>system.</p>
+<p>系统。</p>
 <li>如果需要依赖软件包： stop and mask cups.socket and</li>
 <p>cups.service leaving the cups package installed.</p></div>
   </div>
@@ -11672,11 +11672,11 @@ grep -oP &#x27;(?&lt;=Addr=)[^,+]+&#x27; | grep -v &#x27;^127\.0\.0\.1$&#x27;)&q
   </div>
   <div class="rec-part">
     <h4 class="part-label">影响</h4>
-    <div class="part-content"><p>可能存在依赖于 service&#x27;s package. If the service&#x27;s</p>
+    <div class="part-content"><p>可能存在依赖于 service's package. If the service's</p>
 <p>软件包被移除，这些依赖的软件包也将被移除。在</p>
 <p>removing the service&#x27;s package, review any dependent packages to determine if they</p>
 <p>are 在系统上是必需的。</p>
-<li>如果需要依赖软件包： stop and mask the &lt;service_name&gt;.socket</li>
+<li>如果需要依赖软件包： stop and mask the <service_name>.socket</li>
 <p>and &lt;service_name&gt;.service leaving the service&#x27;s package installed.</p></div>
   </div>
   <div class="rec-part">
@@ -11991,7 +11991,7 @@ grep -oP &#x27;(?&lt;=Addr=)[^,+]+&#x27; | grep -v &#x27;^127\.0\.0\.1$&#x27;)&q
   </div>
   <div class="rec-part">
     <h4 class="part-label">修复措施</h4>
-    <div class="part-content"><p>运行以下命令来uninstall telnet &amp; inetutils-telnet：</p>
+    <div class="part-content"><p>运行以下命令来uninstall telnet & inetutils-telnet：</p>
 <pre><code># apt purge telnet 
 # apt purge inetutils-telnet</code></pre></div>
   </div>
@@ -14033,10 +14033,10 @@ l_systemd_config_file=&quot;/etc/systemd/timesyncd.conf&quot;</code></pre>
     <div class="part-content"><li>IF - systemd-timesyncd is in use on the system, run the following commands:</li>
 <p>运行以下命令来验证that the systemd-timesyncd service is enabled：</p>
 <pre><code># systemctl is-enabled systemd-timesyncd.service</code></pre>
-<p>enabled</p>
+<p>已启用</p>
 <p>运行以下命令来验证that the systemd-timesyncd service is active：</p>
 <pre><code># systemctl is-active systemd-timesyncd.service</code></pre>
-<p>active</p></div>
+<p>活跃</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">修复措施</h4>
@@ -14321,10 +14321,10 @@ l_parameter_value=&#x27;.+&#x27;
     <div class="part-content"><li>IF - chrony is in use on the system, run the following commands:</li>
 <p>运行以下命令来验证that the chrony service is enabled：</p>
 <pre><code># systemctl is-enabled chrony.service</code></pre>
-<p>enabled</p>
+<p>已启用</p>
 <p>运行以下命令来验证that the chrony service is active：</p>
 <pre><code># systemctl is-active chrony.service</code></pre>
-<p>active</p></div>
+<p>活跃</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">修复措施</h4>
@@ -14404,10 +14404,10 @@ l_parameter_value=&#x27;.+&#x27;
     <div class="part-content"><li>如果系统上安装了 cron：</li>
 <p>运行以下命令来验证cron is enabled：</p>
 <pre><code># systemctl list-unit-files | awk &#x27;$1~/^crond?\.service/{print $2}&#x27;</code></pre>
-<p>enabled</p>
+<p>已启用</p>
 <p>运行以下命令来验证that cron is active：</p>
 <pre><code># systemctl list-units | awk &#x27;$1~/^crond?\.service/{print $3}&#x27;</code></pre>
-<p>active</p></div>
+<p>活跃</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">修复措施</h4>
@@ -14461,7 +14461,7 @@ l_parameter_value=&#x27;.+&#x27;
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><li>如果系统上安装了 cron：</li>
-<p>Run the following command and verify Uid and Gid are both 0/root and Access does</p>
+<p>运行以下命令并验证 Uid 和 Gid 都是 0/root 且 Access</p>
 <p>not grant permissions to group or other :</p>
 <pre><code># stat -Lc &#x27;Access: (%a/%A) Uid: ( %u/ %U) Gid: ( %g/ %G)&#x27; /etc/crontab</code></pre>
 <p>Access: (600/-rw-------) Uid: ( 0/ root) Gid: ( 0/ root)</p></div>
@@ -14534,7 +14534,7 @@ l_parameter_value=&#x27;.+&#x27;
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><li>如果系统上安装了 cron：</li>
-<p>Run the following command and verify Uid and Gid are both 0/root and Access does</p>
+<p>运行以下命令并验证 Uid 和 Gid 都是 0/root 且 Access</p>
 <p>not grant permissions to group or other:</p>
 <pre><code># stat -Lc &#x27;Access: (%a/%A) Uid: ( %u/ %U) Gid: ( %g/ %G)&#x27; /etc/cron.hourly/</code></pre>
 <p>Access: (700/drwx------) Uid: ( 0/ root) Gid: ( 0/ root)</p></div>
@@ -14608,7 +14608,7 @@ l_parameter_value=&#x27;.+&#x27;
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><li>如果系统上安装了 cron：</li>
-<p>Run the following command and verify Uid and Gid are both 0/root and Access does</p>
+<p>运行以下命令并验证 Uid 和 Gid 都是 0/root 且 Access</p>
 <p>not grant permissions to group or other:</p>
 <pre><code># stat -Lc &#x27;Access: (%a/%A) Uid: ( %u/ %U) Gid: ( %g/ %G)&#x27; /etc/cron.daily/</code></pre>
 <p>Access: (700/drwx------) Uid: ( 0/ root) Gid: ( 0/ root)</p></div>
@@ -14682,7 +14682,7 @@ l_parameter_value=&#x27;.+&#x27;
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><li>如果系统上安装了 cron：</li>
-<p>Run the following command and verify Uid and Gid are both 0/root and Access does</p>
+<p>运行以下命令并验证 Uid 和 Gid 都是 0/root 且 Access</p>
 <p>not grant permissions to group or other:</p>
 <pre><code># stat -Lc &#x27;Access: (%a/%A) Uid: ( %u/ %U) Gid: ( %g/ %G)&#x27; /etc/cron.weekly/</code></pre>
 <p>Access: (700/drwx------) Uid: ( 0/ root) Gid: ( 0/ root)</p></div>
@@ -14756,7 +14756,7 @@ l_parameter_value=&#x27;.+&#x27;
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><li>如果系统上安装了 cron：</li>
-<p>Run the following command and verify Uid and Gid are both 0/root and Access does</p>
+<p>运行以下命令并验证 Uid 和 Gid 都是 0/root 且 Access</p>
 <p>not grant permissions to group or other:</p>
 <pre><code># stat -Lc &#x27;Access: (%a/%A) Uid: ( %u/ %U) Gid: ( %g/ %G)&#x27; /etc/cron.monthly/</code></pre>
 <p>Access: (700/drwx------) Uid: ( 0/ root) Gid: ( 0/ root)</p></div>
@@ -14830,7 +14830,7 @@ l_parameter_value=&#x27;.+&#x27;
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><li>如果系统上安装了 cron：</li>
-<p>Run the following command and verify Uid and Gid are both 0/root and Access does</p>
+<p>运行以下命令并验证 Uid 和 Gid 都是 0/root 且 Access</p>
 <p>not grant permissions to group or other:</p>
 <pre><code># stat -Lc &#x27;Access: (%a/%A) Uid: ( %u/ %U) Gid: ( %g/ %G)&#x27; /etc/cron.yearly/</code></pre>
 <p>Access: (700/drwx------) Uid: ( 0/ root) Gid: ( 0/ root)</p></div>
@@ -14880,7 +14880,7 @@ l_parameter_value=&#x27;.+&#x27;
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><li>如果系统上安装了 cron：</li>
-<p>Run the following command and verify Uid and Gid are both 0/root and Access does</p>
+<p>运行以下命令并验证 Uid 和 Gid 都是 0/root 且 Access</p>
 <p>not grant permissions to group or other:</p>
 <pre><code># stat -Lc &#x27;Access: (%a/%A) Uid: ( %u/ %U) Gid: ( %g/ %G)&#x27; /etc/cron.d/</code></pre>
 <p>Access: (700/drwx------) Uid: ( 0/ root) Gid: ( 0/ root)</p></div>
@@ -15000,7 +15000,7 @@ l_parameter_value=&#x27;.+&#x27;
 <p>Access: (640/-rw-r-----) Owner: (root) Group: (root)</p>
 <li>或 -</li>
 <p>Access: (640/-rw-r-----) Owner: (root) Group: (crontab)</p>
-<p>运行以下命令来验证either cron.deny doesn&#x27;t exist or is：</p>
+<p>运行以下命令来验证either cron.deny doesn't exist or is：</p>
 <p>•</p>
 <p>Mode 0640 or more restrictive</p>
 <p>•</p>
@@ -15175,7 +15175,7 @@ l_parameter_value=&#x27;.+&#x27;
 <p>-或-</p>
 <p>Access: (640/-rw-r-----) Owner: (root) Group: (root)</p>
 <p>Verify mode is 640 or more restrictive, owner is root, and group is daemon or root</p>
-<p>运行以下命令来验证at.deny doesn&#x27;t exist, -OR- is：</p>
+<p>运行以下命令来验证at.deny doesn't exist, -OR- is：</p>
 <p>•</p>
 <p>Mode 0640 or more restrictive</p>
 <p>•</p>
@@ -15611,13 +15611,13 @@ printf &#x27;install %f /bin/false\nblacklist %f\n\n&#x27; | sed &#x27;s/\.ko//1
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
     <div class="part-content"><p>删除对不需要的协议的支持可以减少</p>
-<p>system. If this protocol is not needed, disable it.</p></div>
+<p>系统。 If this protocol is not needed, disable it.</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>验证 atm 内核模块在系统上不可用或已被禁用。</p>
 <p class="step">1. 运行以下脚本来确定 atm 内核模块是否在 the</p>
-<p>system:</p>
+<p>系统：</p>
 <pre><code>#!/usr/bin/env bash 
  
 { 
@@ -15634,7 +15634,7 @@ printf &#x27;install %f /bin/false\nblacklist %f\n\n&#x27; | sed &#x27;s/\.ko//1
 <p>无需进一步的审计步骤。</p>
 <p>注意：某些系统可能将 atm 文件系统包含在内核中，而不是 to</p>
 <p>being available as a 内核模块. In this case, the above audit will not return anything.</p>
-<p>This is also considered a passing state.</p>
+<p>这也被视为通过状态。</p>
 <p>如果上述脚本有返回内容：</p>
 <p class="step">2. 通过执行以下操作来验证 atm 内核模块未加载且不可加载</p>
 <p>以下操作：</p>
@@ -15721,13 +15721,13 @@ install atm /bin/false</code></pre></div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
     <div class="part-content"><p>删除对不需要的协议的支持可以减少</p>
-<p>system. If this protocol is not needed, disable it.</p></div>
+<p>系统。 If this protocol is not needed, disable it.</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>验证 can 内核模块在系统上不可用或已被禁用。</p>
 <p class="step">1. 运行以下脚本来确定 can 内核模块是否在 the</p>
-<p>system:</p>
+<p>系统：</p>
 <pre><code>#!/usr/bin/env bash 
  
 { 
@@ -15744,7 +15744,7 @@ install atm /bin/false</code></pre></div>
 <p>无需进一步的审计步骤。</p>
 <p>注意：某些系统可能将 can 文件系统包含在内核中，而不是 to</p>
 <p>being available as a 内核模块. In this case, the above audit will not return anything.</p>
-<p>This is also considered a passing state.</p>
+<p>这也被视为通过状态。</p>
 <p>如果上述脚本有返回内容：</p>
 <p class="step">2. 通过执行以下操作来验证 can 内核模块未加载且不可加载</p>
 <p>以下操作：</p>
@@ -15831,13 +15831,13 @@ install can /bin/false</code></pre></div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
     <div class="part-content"><p>删除对不需要的协议的支持可以减少</p>
-<p>system. If this protocol is not needed, disable it.</p></div>
+<p>系统。 If this protocol is not needed, disable it.</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>验证 dccp 内核模块在系统上不可用或已被禁用。</p>
 <p class="step">1. 运行以下脚本来确定 dccp 内核模块是否在 the</p>
-<p>system:</p>
+<p>系统：</p>
 <pre><code>#!/usr/bin/env bash 
  
 { 
@@ -15854,7 +15854,7 @@ install can /bin/false</code></pre></div>
 <p>无需进一步的审计步骤。</p>
 <p>注意：某些系统可能将 dccp 文件系统包含在内核中，而不是 to</p>
 <p>being available as a 内核模块. In this case, the above audit will not return anything.</p>
-<p>This is also considered a passing state.</p>
+<p>这也被视为通过状态。</p>
 <p>如果上述脚本有返回内容：</p>
 <p class="step">2. 通过执行以下操作来验证 dccp 内核模块未加载且不可加载</p>
 <p>以下操作：</p>
@@ -15939,13 +15939,13 @@ install dccp /bin/false</code></pre></div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
     <div class="part-content"><p>删除对不需要的协议的支持可以减少</p>
-<p>system. If this protocol is not needed, disable it.</p></div>
+<p>系统。 If this protocol is not needed, disable it.</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>验证 rds 内核模块在系统上不可用或已被禁用。</p>
 <p class="step">1. 运行以下脚本来确定 rds 内核模块是否在 the</p>
-<p>system:</p>
+<p>系统：</p>
 <pre><code>#!/usr/bin/env bash 
  
 { 
@@ -15962,7 +15962,7 @@ install dccp /bin/false</code></pre></div>
 <p>无需进一步的审计步骤。</p>
 <p>注意：某些系统可能将 rds 文件系统包含在内核中，而不是 to</p>
 <p>being available as a 内核模块. In this case, the above audit will not return anything.</p>
-<p>This is also considered a passing state.</p>
+<p>这也被视为通过状态。</p>
 <p>如果上述脚本有返回内容：</p>
 <p class="step">2. 通过执行以下操作来验证 rds 内核模块未加载且不可加载</p>
 <p>以下操作：</p>
@@ -16049,13 +16049,13 @@ install rds /bin/false</code></pre></div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
     <div class="part-content"><p>删除对不需要的协议的支持可以减少</p>
-<p>system. If this protocol is not needed, disable it.</p></div>
+<p>系统。 If this protocol is not needed, disable it.</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>验证 sctp 内核模块在系统上不可用或已被禁用。</p>
 <p class="step">1. 运行以下脚本来确定 sctp 内核模块是否在 the</p>
-<p>system:</p>
+<p>系统：</p>
 <pre><code>#!/usr/bin/env bash 
  
 { 
@@ -16072,7 +16072,7 @@ install rds /bin/false</code></pre></div>
 <p>无需进一步的审计步骤。</p>
 <p>注意：某些系统可能将 sctp 文件系统包含在内核中，而不是 to</p>
 <p>being available as a 内核模块. In this case, the above audit will not return anything.</p>
-<p>This is also considered a passing state.</p>
+<p>这也被视为通过状态。</p>
 <p>如果上述脚本有返回内容：</p>
 <p class="step">2. 通过执行以下操作来验证 sctp 内核模块未加载且不可加载</p>
 <p>以下操作：</p>
@@ -16157,13 +16157,13 @@ install sctp /bin/false</code></pre></div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
     <div class="part-content"><p>删除对不需要的协议的支持可以减少</p>
-<p>system. If this protocol is not needed, disable it.</p></div>
+<p>系统。 If this protocol is not needed, disable it.</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>验证 tipc 内核模块在系统上不可用或已被禁用。</p>
 <p class="step">1. 运行以下脚本来确定 tipc 内核模块是否在 the</p>
-<p>system:</p>
+<p>系统：</p>
 <pre><code>#!/usr/bin/env bash 
  
 { 
@@ -16180,7 +16180,7 @@ install sctp /bin/false</code></pre></div>
 <p>无需进一步的审计步骤。</p>
 <p>注意：某些系统可能将 tipc 文件系统包含在内核中，而不是 to</p>
 <p>being available as a 内核模块. In this case, the above audit will not return anything.</p>
-<p>This is also considered a passing state.</p>
+<p>这也被视为通过状态。</p>
 <p>如果上述脚本有返回内容：</p>
 <p class="step">2. 通过执行以下操作来验证 tipc 内核模块未加载且不可加载</p>
 <p>以下操作：</p>
@@ -16336,7 +16336,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>The net.ipv4.ip_forward flag tells the system whether it can forward IPv4 packets or</p>
 <p>not.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>注意：</p>
 <p>•</p>
 <p>If this system is a router this recommendation is not</p>
@@ -16508,7 +16508,7 @@ install tipc /bin/false</code></pre></div>
 <p>redirects.</p>
 <p>net.ipv4.conf.all.forwarding controls forwarding of IPv4 packet on all interfaces.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>注意：</p>
 <p>•</p>
 <p>If this system is a router this recommendation is not</p>
@@ -16576,7 +16576,7 @@ install tipc /bin/false</code></pre></div>
 <p>注意：</p>
 <p>•</p>
 <p>If multiple lines with net.ipv4.conf.all.forwarding = are</p>
-<p>returned.</p>
+<p>已返回。</p>
 <p>•</p>
 <p>第一行包含 systemd-sysctl 正在使用的值。如果</p>
 <p>则这是一个正确的值，被视为通过状态。如果文件</p>
@@ -16693,7 +16693,7 @@ install tipc /bin/false</code></pre></div>
 <p>net.ipv4.conf.default.forwarding controls forwarding of IPv4 packet on newly</p>
 <p>added network interfaces.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>注意：</p>
 <p>•</p>
 <p>If this system is a router this recommendation is not</p>
@@ -16759,7 +16759,7 @@ install tipc /bin/false</code></pre></div>
 <li>&quot;net.ipv4.conf.default.forwarding = 0&quot; is set in: &quot;/etc/sysctl.d/60-</li>
 <p>ipv4_sysctl.conf&quot;</p>
 <p>Note: If multiple lines with net.ipv4.conf.default.forwarding = are</p>
-<p>returned.</p>
+<p>已返回。</p>
 <p>•</p>
 <p>第一行包含 systemd-sysctl 正在使用的值。如果</p>
 <p>则这是一个正确的值，被视为通过状态。如果文件</p>
@@ -16867,7 +16867,7 @@ install tipc /bin/false</code></pre></div>
 <p>net.ipv4.conf.all.send_redirects controls sending of all IPv4 ICMP redirected</p>
 <p>packets on all interfaces.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If this system is a router this recommendation is not</p>
 <p>适用。</p></div>
   </div>
@@ -16924,7 +16924,7 @@ install tipc /bin/false</code></pre></div>
 <li>&quot;net.ipv4.conf.all.send_redirects = 0&quot; is set in: &quot;/etc/sysctl.d/60-</li>
 <p>ipv4_sysctl.conf&quot;</p>
 <p>Note: If multiple lines with net.ipv4.conf.all.send_redirects = are</p>
-<p>returned.</p>
+<p>已返回。</p>
 <p>•</p>
 <p>第一行包含 systemd-sysctl 正在使用的值。如果</p>
 <p>则这是一个正确的值，被视为通过状态。如果文件</p>
@@ -17037,7 +17037,7 @@ install tipc /bin/false</code></pre></div>
 <p>net.ipv4.conf.default.send_redirects controls sending of all IPv4 ICMP</p>
 <p>redirected packets on a newly added network interface.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If this system is a router this recommendation is not</p>
 <p>适用。</p></div>
   </div>
@@ -17057,7 +17057,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>Verify net.ipv4.conf.default.send_redirects is set to 0.</p>
 <p class="step">1. Run the following command to verify</p>
 <p>net.ipv4.conf.default.send_redirects is set to 0 in the running</p>
-<p>configuration:</p>
+<p>配置：</p>
 <pre><code># sysctl net.ipv4.conf.default.send_redirects</code></pre>
 <p>验证输出为：</p>
 <p>net.ipv4.conf.default.send_redirects = 0</p>
@@ -17206,7 +17206,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>net.ipv4.icmp_ignore_bogus_error_responses controls if the kernel logs bogus</p>
 <p>responses (RFC-1122 non-compliant) from broadcast reframes.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p></div>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -17218,7 +17218,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>Verify net.ipv4.icmp_ignore_bogus_error_responses is set to 1.</p>
 <p class="step">1. Run the following command to verify</p>
 <p>net.ipv4.icmp_ignore_bogus_error_responses is set to 1 in the running</p>
-<p>configuration:</p>
+<p>配置：</p>
 <pre><code># sysctl net.ipv4.icmp_ignore_bogus_error_responses</code></pre>
 <p>验证输出为：</p>
 <p>net.ipv4.icmp_ignore_bogus_error_responses = 1</p>
@@ -17365,7 +17365,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>net.ipv4.icmp_echo_ignore_broadcasts controls if all ICMP echo and timestamp</p>
 <p>requests to broadcast and multicast addresses are ignored.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p></div>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -17382,7 +17382,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>Verify net.ipv4.icmp_echo_ignore_broadcasts is set to 1.</p>
 <p class="step">1. Run the following command to verify</p>
 <p>net.ipv4.icmp_echo_ignore_broadcasts is set to 1 in the running</p>
-<p>configuration:</p>
+<p>配置：</p>
 <pre><code># sysctl net.ipv4.icmp_echo_ignore_broadcasts</code></pre>
 <p>验证输出为：</p>
 <p>net.ipv4.icmp_echo_ignore_broadcasts = 1</p>
@@ -17527,19 +17527,19 @@ install tipc /bin/false</code></pre></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">描述</h4>
-    <div class="part-content"><p>ICMP redirect messages are packets that convey routing information and tell your host</p>
+    <div class="part-content"><p>ICMP 重定向消息是传递路由信息的数据包，它告诉主机</p>
 <p>(acting as a router) to send packets via an alternate path. It is a way of allowing an</p>
-<p>outside routing device to update your system routing tables.</p>
+<p>外部路由设备更新系统路由表。</p>
 <p>net.ipv4.conf.all.accept_redirects controls accepting of all IPv4 ICMP</p>
 <p>redirected packets on all interfaces.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p></div>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
-    <div class="part-content"><p>ICMP redirect messages are packets that convey routing information and tell your host</p>
+    <div class="part-content"><p>ICMP 重定向消息是传递路由信息的数据包，它告诉主机</p>
 <p>(acting as a router) to send packets via an alternate path. It is a way of allowing an</p>
-<p>outside routing device to update your system routing tables.</p>
+<p>外部路由设备更新系统路由表。</p>
 <p>By setting net.ipv4.conf.all.accept_redirects to 0, the system will not accept</p>
 <p>any IPv4 ICMP redirect messages, and therefore, won&#x27;t allow outsiders to update the</p>
 <p>system&#x27;s routing tables.</p></div>
@@ -17694,21 +17694,21 @@ install tipc /bin/false</code></pre></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">描述</h4>
-    <div class="part-content"><p>ICMP redirect messages are packets that convey routing information and tell your host</p>
+    <div class="part-content"><p>ICMP 重定向消息是传递路由信息的数据包，它告诉主机</p>
 <p>(acting as a router) to send packets via an alternate path. It is a way of allowing an</p>
-<p>outside routing device to update your system routing tables.</p>
+<p>外部路由设备更新系统路由表。</p>
 <p>net.ipv4.conf.default.accept_redirects controls accepting of all IPv4 ICMP</p>
 <p>redirected packets on a newly added network interface.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If this system is a router this recommendation is not</p>
 <p>适用。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
-    <div class="part-content"><p>ICMP redirect messages are packets that convey routing information and tell your host</p>
+    <div class="part-content"><p>ICMP 重定向消息是传递路由信息的数据包，它告诉主机</p>
 <p>(acting as a router) to send packets via an alternate path. It is a way of allowing an</p>
-<p>outside routing device to update your system routing tables.</p>
+<p>外部路由设备更新系统路由表。</p>
 <p>By setting net.ipv4.conf.all.accept_redirects to 0, the system will not accept</p>
 <p>IPv4 ICMP redirect messages on a newly added network interface.</p></div>
   </div>
@@ -17717,7 +17717,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>Verify net.ipv4.conf.default.accept_redirects is set to 0.</p>
 <p class="step">1. Run the following command to verify</p>
 <p>net.ipv4.conf.default.accept_redirects is set to 0 in the running</p>
-<p>configuration:</p>
+<p>配置：</p>
 <pre><code># sysctl net.ipv4.conf.default.accept_redirects</code></pre>
 <p>验证输出为：</p>
 <p>net.ipv4.conf.default.accept_redirects = 0</p>
@@ -17867,7 +17867,7 @@ install tipc /bin/false</code></pre></div>
 <p>gateways listed on the default gateway list. It is assumed that these gateways are</p>
 <p>known to your system, and that they are likely to be secure.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p></div>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -18023,7 +18023,7 @@ install tipc /bin/false</code></pre></div>
 <p>gateways listed on the default gateway list. It is assumed that these gateways are</p>
 <p>known to your system, and that they are likely to be secure.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p></div>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -18037,7 +18037,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>Verify net.ipv4.conf.default.secure_redirects is set to 0.</p>
 <p class="step">1. Run the following command to verify</p>
 <p>net.ipv4.conf.default.secure_redirects is set to 0 in the running</p>
-<p>configuration:</p>
+<p>配置：</p>
 <pre><code># sysctl  net.ipv4.conf.default.secure_redirects</code></pre>
 <p>验证输出为：</p>
 <p>net.ipv4.conf.default.secure_redirects = 0</p>
@@ -18185,7 +18185,7 @@ install tipc /bin/false</code></pre></div>
 <p>the packet&#x27;s source address is not reachable through the interface it arrived on, the</p>
 <p>packet is dropped.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If this system is a router, and uses asymmetrical routing, this</p>
 <p>recommendation is not 适用。</p></div>
   </div>
@@ -18245,7 +18245,7 @@ install tipc /bin/false</code></pre></div>
 <li>&quot;net.ipv4.conf.all.rp_filter = 1&quot; is set in: &quot;/etc/sysctl.d/60-</li>
 <p>ipv4_sysctl.conf&quot;</p>
 <p>Note: If multiple lines with net.ipv4.conf.all.rp_filter = are</p>
-<p>returned.</p>
+<p>已返回。</p>
 <p>•</p>
 <p>第一行包含 systemd-sysctl 正在使用的值。如果</p>
 <p>则这是一个正确的值，被视为通过状态。如果文件</p>
@@ -18359,7 +18359,7 @@ install tipc /bin/false</code></pre></div>
 <p>the packet&#x27;s source address is not reachable through the interface it arrived on, the</p>
 <p>packet is dropped.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If this system is a router, and uses asymmetrical routing, this</p>
 <p>recommendation is not 适用。</p></div>
   </div>
@@ -18420,7 +18420,7 @@ install tipc /bin/false</code></pre></div>
 <li>&quot;net.ipv4.conf.default.rp_filter = 1&quot; is set in: &quot;/etc/sysctl.d/60-</li>
 <p>ipv4_sysctl.conf&quot;</p>
 <p>Note: If multiple lines with net.ipv4.conf.default.rp_filter = are</p>
-<p>returned.</p>
+<p>已返回。</p>
 <p>•</p>
 <p>第一行包含 systemd-sysctl 正在使用的值。如果</p>
 <p>则这是一个正确的值，被视为通过状态。如果文件</p>
@@ -18534,7 +18534,7 @@ install tipc /bin/false</code></pre></div>
 <p>reachable from some locations (e.g. private addresses vs. Internet routable), and so</p>
 <p>source routed packets would need to be used.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p></div>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -18553,7 +18553,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>Verify net.ipv4.conf.all.accept_source_route is set to 0.</p>
 <p class="step">1. Run the following command to verify</p>
 <p>net.ipv4.conf.all.accept_source_route is set to 0 in the running</p>
-<p>configuration:</p>
+<p>配置：</p>
 <pre><code># sysctl net.ipv4.conf.all.accept_source_route</code></pre>
 <p>验证输出为：</p>
 <p>net.ipv4.conf.all.accept_source_route = 0</p>
@@ -18709,7 +18709,7 @@ install tipc /bin/false</code></pre></div>
 <p>reachable from some locations (e.g. private addresses vs. Internet routable), and so</p>
 <p>source routed packets would need to be used.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p></div>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -18728,7 +18728,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>Verify net.ipv4.conf.default.accept_source_route is set to 0.</p>
 <p class="step">1. Run the following command to verify</p>
 <p>net.ipv4.conf.default.accept_source_route is set to 0 in the running</p>
-<p>configuration:</p>
+<p>配置：</p>
 <pre><code># sysctl net.ipv4.conf.default.accept_source_route</code></pre>
 <p>验证输出为：</p>
 <p>net.ipv4.conf.default.accept_source_route = 0</p>
@@ -18880,7 +18880,7 @@ install tipc /bin/false</code></pre></div>
 <p>net.ipv4.conf.all.log_martians controls if IPv4 packets with un-routable source</p>
 <p>addresses on any network interface is logged to the kernel log.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p></div>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -18931,7 +18931,7 @@ install tipc /bin/false</code></pre></div>
 <li>&quot;net.ipv4.conf.all.log_martians = 1&quot; is set in: &quot;/etc/sysctl.d/60-</li>
 <p>ipv4_sysctl.conf&quot;</p>
 <p>Note: If multiple lines with net.ipv4.conf.all.log_martians = are</p>
-<p>returned.</p>
+<p>已返回。</p>
 <p>•</p>
 <p>第一行包含 systemd-sysctl 正在使用的值。如果</p>
 <p>则这是一个正确的值，被视为通过状态。如果文件</p>
@@ -19195,7 +19195,7 @@ install tipc /bin/false</code></pre></div>
 <p>net.ipv4.conf.default.log_martians controls if IPv4 packets with un-routable</p>
 <p>source addresses on a newly added network interface is logged to the kernel log.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p></div>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -19366,7 +19366,7 @@ install tipc /bin/false</code></pre></div>
 <p>system to verify that it has received a valid response to a SYN cookie and allow the</p>
 <p>connection, even though there is no corresponding SYN in the queue.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p></div>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -19554,7 +19554,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>The net.ipv6.conf.all.forwarding flag tells the system whether it can forward IPv6</p>
 <p>packets or not.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If IPv6 has been disabled, or this system is a router, this</p>
 <p>recommendation is not 适用。</p></div>
   </div>
@@ -19576,7 +19576,7 @@ install tipc /bin/false</code></pre></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
-    <div class="part-content"><li>IF IPv6 is enabled on the system -</li>
+    <div class="part-content"><li>如果系统上启用了 IPv6 -</li>
 <p>Verify net.ipv6.conf.all.forwarding is set to 0.</p>
 <p class="step">1. Run the following command to verify net.ipv6.conf.all.forwarding is set to</p>
 <p>0 in the running configuration:</p>
@@ -19618,7 +19618,7 @@ install tipc /bin/false</code></pre></div>
 <li>&quot;net.ipv6.conf.all.forwarding = 0&quot; is set in: &quot;/etc/sysctl.d/60-</li>
 <p>ipv6_sysctl.conf&quot;</p>
 <p>Note: If multiple lines with net.ipv6.conf.all.forwarding = are</p>
-<p>returned.</p>
+<p>已返回。</p>
 <p>•</p>
 <p>第一行包含 systemd-sysctl 正在使用的值。如果</p>
 <p>则这是一个正确的值，被视为通过状态。如果文件</p>
@@ -19728,7 +19728,7 @@ install tipc /bin/false</code></pre></div>
     <div class="part-content"><p>The net.ipv6.conf.all.forwarding flag tells the system whether it can forward IPv6</p>
 <p>on the default or newly added network interface.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If IPv6 has been disabled, or this system is a router, this</p>
 <p>recommendation is not 适用。</p></div>
   </div>
@@ -19748,7 +19748,7 @@ install tipc /bin/false</code></pre></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
-    <div class="part-content"><li>IF IPv6 is enabled on the system -</li>
+    <div class="part-content"><li>如果系统上启用了 IPv6 -</li>
 <p>Verify net.ipv6.conf.default.forwarding is set to 0.</p>
 <p class="step">1. Run the following command to verify net.ipv6.conf.default.forwarding is</p>
 <p>set to 0 in the running configuration:</p>
@@ -19790,7 +19790,7 @@ install tipc /bin/false</code></pre></div>
 <li>&quot;net.ipv6.conf.default.forwarding = 0&quot; is set in: &quot;/etc/sysctl.d/60-</li>
 <p>ipv6_sysctl.conf&quot;</p>
 <p>Note: If multiple lines with net.ipv6.conf.default.forwarding = are</p>
-<p>returned.</p>
+<p>已返回。</p>
 <p>•</p>
 <p>第一行包含 systemd-sysctl 正在使用的值。如果</p>
 <p>则这是一个正确的值，被视为通过状态。如果文件</p>
@@ -19893,28 +19893,28 @@ install tipc /bin/false</code></pre></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">描述</h4>
-    <div class="part-content"><p>ICMP redirect messages are packets that convey routing information and tell your host</p>
+    <div class="part-content"><p>ICMP 重定向消息是传递路由信息的数据包，它告诉主机</p>
 <p>(acting as a router) to send packets via an alternate path. It is a way of allowing an</p>
-<p>outside routing device to update your system routing tables.</p>
+<p>外部路由设备更新系统路由表。</p>
 <p>net.ipv6.conf.all.accept_redirects controls accepting of all IPv6 ICMP</p>
 <p>redirected packets on all interfaces.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If IPv6 has been disabled, or this system is a router, this</p>
 <p>recommendation is not 适用。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
-    <div class="part-content"><p>ICMP redirect messages are packets that convey routing information and tell your host</p>
+    <div class="part-content"><p>ICMP 重定向消息是传递路由信息的数据包，它告诉主机</p>
 <p>(acting as a router) to send packets via an alternate path. It is a way of allowing an</p>
-<p>outside routing device to update your system routing tables.</p>
+<p>外部路由设备更新系统路由表。</p>
 <p>By setting net.ipv6.conf.all.accept_redirects to 0, the system will not accept</p>
 <p>any IPv6 ICMP redirect messages, and therefore, won&#x27;t allow outsiders to update the</p>
 <p>system&#x27;s routing tables.</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
-    <div class="part-content"><li>IF IPv6 is enabled on the system -</li>
+    <div class="part-content"><li>如果系统上启用了 IPv6 -</li>
 <p>Verify net.ipv6.conf.all.accept_redirects is set to 0.</p>
 <p class="step">1. Run the following command to verify net.ipv6.conf.all.accept_redirects</p>
 <p>is set to 0 in the running configuration:</p>
@@ -20063,31 +20063,31 @@ install tipc /bin/false</code></pre></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">描述</h4>
-    <div class="part-content"><p>ICMP redirect messages are packets that convey routing information and tell your host</p>
+    <div class="part-content"><p>ICMP 重定向消息是传递路由信息的数据包，它告诉主机</p>
 <p>(acting as a router) to send packets via an alternate path. It is a way of allowing an</p>
-<p>outside routing device to update your system routing tables.</p>
+<p>外部路由设备更新系统路由表。</p>
 <p>net.ipv6.conf.default.accept_redirects controls accepting of all IPv6 ICMP</p>
 <p>redirected packets on a newly added network interface.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If IPv6 has been disabled, or this system is a router, this</p>
 <p>recommendation is not 适用。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
-    <div class="part-content"><p>ICMP redirect messages are packets that convey routing information and tell your host</p>
+    <div class="part-content"><p>ICMP 重定向消息是传递路由信息的数据包，它告诉主机</p>
 <p>(acting as a router) to send packets via an alternate path. It is a way of allowing an</p>
-<p>outside routing device to update your system routing tables.</p>
+<p>外部路由设备更新系统路由表。</p>
 <p>By setting net.ipv6.conf.default.accept_redirects to 0, the system will not</p>
 <p>accept IPv6 ICMP redirect messages on a newly added network interface.</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
-    <div class="part-content"><li>IF IPv6 is enabled on the system -</li>
+    <div class="part-content"><li>如果系统上启用了 IPv6 -</li>
 <p>Verify net.ipv6.conf.default.accept_redirects is set to 0.</p>
 <p class="step">1. Run the following command to verify</p>
 <p>net.ipv6.conf.default.accept_redirects is set to 0 in the running</p>
-<p>configuration:</p>
+<p>配置：</p>
 <pre><code># sysctl net.ipv6.conf.default.accept_redirects</code></pre>
 <p>验证输出为：</p>
 <p>net.ipv6.conf.default.accept_redirects = 0</p>
@@ -20243,7 +20243,7 @@ install tipc /bin/false</code></pre></div>
 <p>reachable from some locations (e.g. private addresses vs. Internet routable), and so</p>
 <p>source routed packets would need to be used.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If IPv6 has been disabled this recommendation is not</p>
 <p>适用。</p></div>
   </div>
@@ -20261,11 +20261,11 @@ install tipc /bin/false</code></pre></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
-    <div class="part-content"><li>IF IPv6 is enabled on the system -</li>
+    <div class="part-content"><li>如果系统上启用了 IPv6 -</li>
 <p>Verify net.ipv6.conf.all.accept_source_route is set to 0.</p>
 <p class="step">1. Run the following command to verify</p>
 <p>net.ipv6.conf.all.accept_source_route is set to 0 in the running</p>
-<p>configuration:</p>
+<p>配置：</p>
 <pre><code># sysctl net.ipv6.conf.all.accept_source_route</code></pre>
 <p>验证输出为：</p>
 <p>net.ipv6.conf.all.accept_source_route = 0</p>
@@ -20421,7 +20421,7 @@ install tipc /bin/false</code></pre></div>
 <p>reachable from some locations (e.g. private addresses vs. Internet routable), and so</p>
 <p>source routed packets would need to be used.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If IPv6 has been disabled this recommendation is not</p>
 <p>适用。</p></div>
   </div>
@@ -20439,11 +20439,11 @@ install tipc /bin/false</code></pre></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
-    <div class="part-content"><li>IF IPv6 is enabled on the system -</li>
+    <div class="part-content"><li>如果系统上启用了 IPv6 -</li>
 <p>Verify net.ipv6.conf.default.accept_source_route is set to 0.</p>
 <p class="step">1. Run the following command to verify</p>
 <p>net.ipv6.conf.default.accept_source_route is set to 0 in the running</p>
-<p>configuration:</p>
+<p>配置：</p>
 <pre><code># sysctl net.ipv6.conf.default.accept_source_route</code></pre>
 <p>验证输出为：</p>
 <p>net.ipv6.conf.default.accept_source_route = 0</p>
@@ -20596,7 +20596,7 @@ install tipc /bin/false</code></pre></div>
 <p>net.ipv6.conf.all.accept_ra controls accepting any IPv6 RA messages on any</p>
 <p>network device.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If IPv6 has been disabled, this recommendation is not</p>
 <p>适用。</p></div>
   </div>
@@ -20609,7 +20609,7 @@ install tipc /bin/false</code></pre></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
-    <div class="part-content"><li>IF IPv6 is enabled on the system -</li>
+    <div class="part-content"><li>如果系统上启用了 IPv6 -</li>
 <p>Verify net.ipv6.conf.all.accept_ra is set to 0.</p>
 <p class="step">1. Run the following command to verify net.ipv6.conf.all.accept_ra is set to 0</p>
 <p>in the running configuration:</p>
@@ -20651,7 +20651,7 @@ install tipc /bin/false</code></pre></div>
 <li>&quot;net.ipv6.conf.all.accept_ra = 0&quot; is set in: &quot;/etc/sysctl.d/60-</li>
 <p>ipv6_sysctl.conf&quot;</p>
 <p>Note: If multiple lines with net.ipv6.conf.all.accept_ra = are</p>
-<p>returned.</p>
+<p>已返回。</p>
 <p>•</p>
 <p>第一行包含 systemd-sysctl 正在使用的值。如果</p>
 <p>则这是一个正确的值，被视为通过状态。如果文件</p>
@@ -20763,7 +20763,7 @@ install tipc /bin/false</code></pre></div>
 <p>net.ipv6.conf.default.accept_ra controls accepting IPv6 RA messages on newly</p>
 <p>added network devices.</p>
 <p>有关内核参数配置文件、其位置和加载</p>
-<p>preference is available in the &quot;Configure Network Kernel Parameters&quot; section overview.</p>
+<p>优先级的更多信息，请参阅“配置网络内核参数”章节概述。</p>
 <p>Note: If IPv6 has been disabled, this recommendation is not</p>
 <p>适用。</p></div>
   </div>
@@ -20776,7 +20776,7 @@ install tipc /bin/false</code></pre></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
-    <div class="part-content"><li>IF IPv6 is enabled on the system -</li>
+    <div class="part-content"><li>如果系统上启用了 IPv6 -</li>
 <p>Verify net.ipv6.conf.default.accept_ra is set to 0.</p>
 <p class="step">1. Run the following command to verify net.ipv6.conf.default.accept_ra is</p>
 <p>set to 0 in the running configuration:</p>
@@ -20818,7 +20818,7 @@ install tipc /bin/false</code></pre></div>
 <li>&quot;net.ipv6.conf.default.accept_ra = 0&quot; is set in: &quot;/etc/sysctl.d/60-</li>
 <p>ipv6_sysctl.conf&quot;</p>
 <p>Note: If multiple lines with net.ipv6.conf.default.accept_ra = are</p>
-<p>returned.</p>
+<p>已返回。</p>
 <p>•</p>
 <p>第一行包含 systemd-sysctl 正在使用的值。如果</p>
 <p>则这是一个正确的值，被视为通过状态。如果文件</p>
@@ -21060,7 +21060,7 @@ ufw is installed</code></pre></div>
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The service, ufw.service, manages UFW. This service is responsible for applying and</p>
 <p>maintaining firewall rules, controlling which network traffic is allowed in and out of the</p>
-<p>system.</p>
+<p>系统。</p>
 <p>注意：</p>
 <p>•</p>
 <p>When running ufw enable or starting ufw.service, ufw will flush its chains. This</p>
@@ -21101,10 +21101,10 @@ ufw is installed</code></pre></div>
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>运行以下命令来验证ufw.service is enabled：</p>
 <pre><code># systemctl is-enabled ufw.service</code></pre>
-<p>enabled</p>
+<p>已启用</p>
 <p>运行以下命令来验证ufw.service is active：</p>
 <pre><code># systemctl is-active ufw.service</code></pre>
-<p>active</p>
+<p>活跃</p>
 <p>Run the following command to verify ufw is active</p>
 <pre><code># ufw status</code></pre>
 <p>Status: active</p></div>
@@ -21115,7 +21115,7 @@ ufw is installed</code></pre></div>
 <pre><code># systemctl unmask ufw.service</code></pre>
 <p>运行以下命令来enable and start the ufw.service：</p>
 <pre><code># systemctl --now enable ufw.service</code></pre>
-<p>active</p>
+<p>活跃</p>
 <p>运行以下命令来enable ufw：</p>
 <pre><code># ufw enable</code></pre></div>
   </div>
@@ -21536,8 +21536,8 @@ ufw logging on</code></pre></div>
 <p>(sshd), which manages secure remote logins and other SSH services.</p>
 <p>/etc/ssh/sshd_config is the default location for drop-in configuration files used by</p>
 <p>sshd.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -21910,8 +21910,8 @@ ufw logging on</code></pre></div>
 <p>denying specific groups of users to ssh into the system. The list consists</p>
 <p>of space separated group names. Numeric group IDs are not recognized</p>
 <p>with this variable.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -21937,10 +21937,10 @@ ufw logging on</code></pre></div>
 <p>-或-</p>
 <p>denygroups &lt;grouplist&gt;</p>
 <p>Review the list(s) to ensure included users and/or groups follow local site policy</p>
-<li>IF - Match set statements are used in your environment, specify the connection</li>
-<p>parameters to use for the -T extended test mode and run the audit to verify the setting</p>
-<p>is not incorrectly configured in a match block</p>
-<p>Example additional audit needed for a match block for the user sshuser:</p>
+<li>如果 - 您的环境中使用了 Match set 语句，请指定连接</li>
+<p>参数用于 -T 扩展测试模式，并运行审计来验证设置</p>
+<p>未在 match 块中被错误配置</p>
+<p>用户 sshuser 的 match 块所需的额外审计示例：</p>
 <p># sshd -T -C user=sshuser | grep -Pi --</p>
 <p>&#x27;^\h*(allow|deny)(users|groups)\h+\H+&#x27;</p></div>
   </div>
@@ -22007,8 +22007,8 @@ ufw logging on</code></pre></div>
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The Banner parameter specifies a file whose contents must be sent to the remote user</p>
 <p>before authentication is permitted. By default, no banner is displayed.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -22028,10 +22028,10 @@ ufw logging on</code></pre></div>
 <p># sshd -T | grep -Pi -- &#x27;^banner\h+\/\H+&#x27;</p>
 <p>示例：</p>
 <p>banner /etc/issue.net</p>
-<li>IF - Match set statements are used in your environment, specify the connection</li>
-<p>parameters to use for the -T extended test mode and run the audit to verify the setting</p>
-<p>is not incorrectly configured in a match block</p>
-<p>Example additional audit needed for a match block for the user sshuser:</p>
+<li>如果 - 您的环境中使用了 Match set 语句，请指定连接</li>
+<p>参数用于 -T 扩展测试模式，并运行审计来验证设置</p>
+<p>未在 match 块中被错误配置</p>
+<p>用户 sshuser 的 match 块所需的额外审计示例：</p>
 <p># sshd -T -C user=sshuser | grep -Pi -- &#x27;^banner\h+\/\H+&#x27;</p>
 <p class="step">2. Ensure the banner matches local site policy.</p>
 <p>Run the following command and verify that the contents or the file being called by the</p>
@@ -22088,8 +22088,8 @@ awk &#x27;$1 == &quot;banner&quot; {print $2}&#x27;)&quot;</code></pre>
 <p>session is established. During connection setup, the client and server negotiate to</p>
 <p>select the strongest available cipher that both support, ensuring the connection is as</p>
 <p>secure as possible</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -22106,7 +22106,7 @@ awk &#x27;$1 == &quot;banner&quot; {print $2}&#x27;)&quot;</code></pre>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
-    <div class="part-content"><p>运行以下命令来验证none of the &quot;weak&quot; ciphers are being used：</p>
+    <div class="part-content"><p>运行以下命令来验证none of the "weak" ciphers are being used：</p>
 <p># sshd -T | grep -Pi --</p>
 <p>&#x27;^ciphers\h+\&quot;?([^#\n\r]+,)?((3des|blowfish|cast128|aes(128|192|256))-</p>
 <p>cbc|arcfour(128|256)?|rijndael-cbc@lysator\.liu\.se)\b&#x27;</p>
@@ -22217,8 +22217,8 @@ awk &#x27;$1 == &quot;banner&quot; {print $2}&#x27;)&quot;</code></pre>
 <p>is left at the default, unresponsive SSH clients will be disconnected after</p>
 <p>approximately 45 seconds. Setting a zero ClientAliveCountMax disables</p>
 <p>connection termination.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -22239,10 +22239,10 @@ awk &#x27;$1 == &quot;banner&quot; {print $2}&#x27;)&quot;</code></pre>
 <p>Example Output:</p>
 <p>clientaliveinterval 15</p>
 <p>clientalivecountmax 3</p>
-<li>IF - Match set statements are used in your environment, specify the connection</li>
-<p>parameters to use for the -T extended test mode and run the audit to verify the setting</p>
-<p>is not incorrectly configured in a match block</p>
-<p>Example additional audit needed for a match block for the user sshuser:</p>
+<li>如果 - 您的环境中使用了 Match set 语句，请指定连接</li>
+<p>参数用于 -T 扩展测试模式，并运行审计来验证设置</p>
+<p>未在 match 块中被错误配置</p>
+<p>用户 sshuser 的 match 块所需的额外审计示例：</p>
 <p># sshd -T -C user=sshuser | grep -Pi --</p>
 <p>&#x27;(clientaliveinterval|clientalivecountmax)&#x27;</p>
 <p>Note: If provided, any Match directives in the configuration file that would apply are</p>
@@ -22318,8 +22318,8 @@ awk &#x27;$1 == &quot;banner&quot; {print $2}&#x27;)&quot;</code></pre>
 <p>to legacy applications, going through firewalls, and some system administrators</p>
 <p>and IT professionals use it for opening backdoors into the internal network from</p>
 <p>their home machines.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -22555,8 +22555,8 @@ awk &#x27;$1 == &quot;banner&quot; {print $2}&#x27;)&quot;</code></pre>
     <div class="part-content"><p>The HostbasedAuthentication parameter specifies if authentication is allowed</p>
 <p>through trusted hosts via the user of .rhosts, or /etc/hosts.equiv, along with</p>
 <p>successful public key client host authentication.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -22569,10 +22569,10 @@ awk &#x27;$1 == &quot;banner&quot; {print $2}&#x27;)&quot;</code></pre>
     <div class="part-content"><p>运行以下命令来验证HostbasedAuthentication is set to no：</p>
 <pre><code># sshd -T | grep hostbasedauthentication</code></pre>
 <p>hostbasedauthentication no</p>
-<li>IF - Match set statements are used in your environment, specify the connection</li>
-<p>parameters to use for the -T extended test mode and run the audit to verify the setting</p>
-<p>is not incorrectly configured in a match block</p>
-<p>Example additional audit needed for a match block for the user sshuser:</p>
+<li>如果 - 您的环境中使用了 Match set 语句，请指定连接</li>
+<p>参数用于 -T 扩展测试模式，并运行审计来验证设置</p>
+<p>未在 match 块中被错误配置</p>
+<p>用户 sshuser 的 match 块所需的额外审计示例：</p>
 <pre><code># sshd -T -C user=sshuser | grep hostbasedauthentication</code></pre></div>
   </div>
   <div class="rec-part">
@@ -22627,8 +22627,8 @@ awk &#x27;$1 == &quot;banner&quot; {print $2}&#x27;)&quot;</code></pre>
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The IgnoreRhosts parameter specifies that .rhosts and .shosts files will not be used</p>
 <p>in RhostsRSAAuthentication or HostbasedAuthentication.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -22694,8 +22694,8 @@ awk &#x27;$1 == &quot;banner&quot; {print $2}&#x27;)&quot;</code></pre>
 <p>exchanged between two parties, allowing use of a cryptographic algorithm. If the sender</p>
 <p>and receiver wish to exchange encrypted messages, each must be equipped to encrypt</p>
 <p>messages to be sent and decrypt messages received</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -22906,8 +22906,8 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
 <p>unauthenticated connections can exist. Like other session controls in this session the</p>
 <p>Grace Period should be limited to appropriate organizational limits to ensure the service</p>
 <p>is available for needed access.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -22967,8 +22967,8 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
 <p>options are specifically not recommended other than strictly for debugging SSH</p>
 <p>communications. These levels provide so much data that it is difficult to identify</p>
 <p>important security information, and may violate the privacy of users.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -22988,10 +22988,10 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
 <p>loglevel VERBOSE</p>
 <li>或 -</li>
 <p>loglevel INFO</p>
-<li>IF - Match set statements are used in your environment, specify the connection</li>
-<p>parameters to use for the -T extended test mode and run the audit to verify the setting</p>
-<p>is not incorrectly configured in a match block</p>
-<p>Example additional audit needed for a match block for the user sshuser:</p>
+<li>如果 - 您的环境中使用了 Match set 语句，请指定连接</li>
+<p>参数用于 -T 扩展测试模式，并运行审计来验证设置</p>
+<p>未在 match 块中被错误配置</p>
+<p>用户 sshuser 的 match 块所需的额外审计示例：</p>
 <p># sshd -T -C user=sshuser | grep loglevel</p></div>
   </div>
   <div class="rec-part">
@@ -23053,8 +23053,8 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>This variable limits the types of MAC algorithms that SSH can use during</p>
 <p>communication.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -23073,7 +23073,7 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
-    <div class="part-content"><p>运行以下命令来验证none of the &quot;weak&quot; MACs are being used：</p>
+    <div class="part-content"><p>运行以下命令来验证none of the "weak" MACs are being used：</p>
 <p># sshd -T | grep -Pi -- &#x27;macs\h+([^#\n\r]+,)?(hmac-md5|hmac-md5-96|hmac-</p>
 <p>ripemd160|hmac-sha1-96|umac-64@openssh\.com|hmac-md5-etm@openssh\.com|hmac-</p>
 <p>md5-96-etm@openssh\.com|hmac-ripemd160-etm@openssh\.com|hmac-sha1-96-</p>
@@ -23163,8 +23163,8 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
     <div class="part-content"><p>The MaxAuthTries parameter specifies the maximum number of authentication</p>
 <p>attempts permitted per connection. When the login failure count reaches half the</p>
 <p>number, error messages will be written to the syslog file detailing the login failure.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -23177,10 +23177,10 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
     <div class="part-content"><p>Run the following command and verify that MaxAuthTries is 4 or less:</p>
 <p># sshd -T | grep maxauthtries</p>
 <p>maxauthtries 4</p>
-<li>IF - Match set statements are used in your environment, specify the connection</li>
-<p>parameters to use for the -T extended test mode and run the audit to verify the setting</p>
-<p>is not incorrectly configured in a match block</p>
-<p>Example additional audit needed for a match block for the user sshuser:</p>
+<li>如果 - 您的环境中使用了 Match set 语句，请指定连接</li>
+<p>参数用于 -T 扩展测试模式，并运行审计来验证设置</p>
+<p>未在 match 块中被错误配置</p>
+<p>用户 sshuser 的 match 块所需的额外审计示例：</p>
 <p># sshd -T -C user=sshuser | grep maxauthtries</p></div>
   </div>
   <div class="rec-part">
@@ -23231,8 +23231,8 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The MaxSessions parameter specifies the maximum number of open sessions</p>
 <p>permitted from a given connection.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -23249,10 +23249,10 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
 <pre><code>grep -Psi -- &#x27;^\h*MaxSessions\h+\&quot;?(1[1-9]|[2-9][0-9]|[1-9][0-9][0-9]+)\b&#x27; 
 /etc/ssh/sshd_config /etc/ssh/sshd_config.d/*.conf</code></pre>
 <p>不应返回任何内容</p>
-<li>IF - Match set statements are used in your environment, specify the connection</li>
-<p>parameters to use for the -T extended test mode and run the audit to verify the setting</p>
-<p>is not incorrectly configured in a match block</p>
-<p>Example additional audit needed for a match block for the user sshuser:</p>
+<li>如果 - 您的环境中使用了 Match set 语句，请指定连接</li>
+<p>参数用于 -T 扩展测试模式，并运行审计来验证设置</p>
+<p>未在 match 块中被错误配置</p>
+<p>用户 sshuser 的 match 块所需的额外审计示例：</p>
 <p># sshd -T -C user=sshuser | grep maxsessions</p></div>
   </div>
   <div class="rec-part">
@@ -23296,8 +23296,8 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The MaxStartups parameter specifies the maximum number of concurrent</p>
 <p>unauthenticated connections to the SSH daemon.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -23353,8 +23353,8 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The PermitEmptyPasswords parameter specifies if the SSH server allows login to</p>
 <p>accounts with empty password strings.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -23366,10 +23366,10 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
     <div class="part-content"><p>运行以下命令来验证PermitEmptyPasswords is set to no：</p>
 <p># sshd -T | grep permitemptypasswords</p>
 <p>permitemptypasswords no</p>
-<li>IF - Match set statements are used in your environment, specify the connection</li>
-<p>parameters to use for the -T extended test mode and run the audit to verify the setting</p>
-<p>is not incorrectly configured in a match block</p>
-<p>Example additional audit needed for a match block for the user sshuser:</p>
+<li>如果 - 您的环境中使用了 Match set 语句，请指定连接</li>
+<p>参数用于 -T 扩展测试模式，并运行审计来验证设置</p>
+<p>未在 match 块中被错误配置</p>
+<p>用户 sshuser 的 match 块所需的额外审计示例：</p>
 <p># sshd -T -C user=sshuser | grep permitemptypasswords</p></div>
   </div>
   <div class="rec-part">
@@ -23423,8 +23423,8 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The PermitRootLogin parameter specifies if the root user can log in using SSH. The</p>
 <p>default is prohibit-password.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -23437,10 +23437,10 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
     <div class="part-content"><p>运行以下命令来验证PermitRootLogin is set to no：</p>
 <p># sshd -T | grep permitrootlogin</p>
 <p>permitrootlogin no</p>
-<li>IF - Match set statements are used in your environment, specify the connection</li>
-<p>parameters to use for the -T extended test mode and run the audit to verify the setting</p>
-<p>is not incorrectly configured in a match block</p>
-<p>Example additional audit needed for a match block for the user sshuser:</p>
+<li>如果 - 您的环境中使用了 Match set 语句，请指定连接</li>
+<p>参数用于 -T 扩展测试模式，并运行审计来验证设置</p>
+<p>未在 match 块中被错误配置</p>
+<p>用户 sshuser 的 match 块所需的额外审计示例：</p>
 <p># sshd -T -C user=sshuser | grep permitrootlogin</p></div>
   </div>
   <div class="rec-part">
@@ -23497,8 +23497,8 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The PermitUserEnvironment option allows users to present environment options to</p>
 <p>the SSH daemon.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -23556,8 +23556,8 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
 <p>set to yes this will enable PAM authentication using</p>
 <p>ChallengeResponseAuthentication and PasswordAuthentication directives in</p>
 <p>addition to PAM account and session module processing for all authentication types.</p>
-<p>More information about the openSSH server configuration is available in the &quot;Configure</p>
-<p>SSH Server&quot; section overview.</p></div>
+<p>有关 openSSH 服务器配置的更多信息，请参阅“配置</p>
+<p>SSH 服务器”章节概述。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -23837,7 +23837,7 @@ awk &#x27;($1==&quot;kexalgorithms&quot; &amp;&amp; $2~/mlkem768x25519-sha256/) 
   <div class="rec-part">
     <h4 class="part-label">修复措施</h4>
     <div class="part-content"><p>Edit the file /etc/sudoers or a file in /etc/sudoers.d/ with visudo -f &lt;PATH TO</p>
-<p>FILE&gt; and 添加以下行：</p>
+<p>FILE> and 添加以下行：</p>
 <p>Defaults  logfile=&quot;&lt;PATH TO CUSTOM LOG FILE&gt;&quot;</p>
 <p>示例：</p>
 <p>Defaults logfile=&quot;/var/log/sudo.log&quot;</p></div>
@@ -24525,7 +24525,7 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>运行以下命令来verify that pam_faillock is enabled：</p>
 <p># grep -P -- &#x27;\bpam_faillock\.so\b&#x27; /etc/pam.d/common-{auth,account}</p>
-<p>Output should be similar to:</p>
+<p>输出应类似于：</p>
 <p>/etc/pam.d/common-auth:auth     requisite</p>
 <p>pam_faillock.so preauth</p>
 <p>/etc/pam.d/common-auth:auth     [default=die]</p>
@@ -24539,7 +24539,7 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <p class="step">1. Create the faillock profile in /usr/share/pam-configs/ with the following</p>
 <p>lines:</p>
 <p>Name: Enable pam_faillock to deny access</p>
-<p>Default: yes</p>
+<p>默认值：yes</p>
 <p>Priority: 0</p>
 <p>Auth-Type: Primary</p>
 <p>Auth:</p>
@@ -24556,7 +24556,7 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <p class="step">2. Create the faillock_notify profile in /usr/share/pam-configs/ with the</p>
 <p>following lines:</p>
 <p>Name: Notify of failed login attempts and reset count upon success</p>
-<p>Default: yes</p>
+<p>默认值：yes</p>
 <p>Priority: 1024</p>
 <p>Auth-Type: Primary</p>
 <p>Auth:</p>
@@ -24651,7 +24651,7 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>运行以下命令来验证that pam_pwquality.so is enabled：</p>
 <p># grep -P -- &#x27;\bpam_pwquality\.so\b&#x27; /etc/pam.d/common-password</p>
-<p>Output should be similar to:</p>
+<p>输出应类似于：</p>
 <p>password   requisite   pam_pwquality.so retry=3</p></div>
   </div>
   <div class="rec-part">
@@ -24659,7 +24659,7 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
     <div class="part-content"><p>Run the following script to verify the pam_pwquality.so line exists in a pam-auth-</p>
 <p>update profile:</p>
 <p># grep -P -- &#x27;\bpam_pwquality\.so\b&#x27; /usr/share/pam-configs/*</p>
-<p>Output should be similar to:</p>
+<p>输出应类似于：</p>
 <p>/usr/share/pam-configs/pwquality:       requisite</p>
 <p>pam_pwquality.so retry=3</p>
 <p>/usr/share/pam-configs/pwquality:       requisite</p>
@@ -24674,7 +24674,7 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <p>Create a pam-auth-update profile in /usr/share/pam-configs/ with the following</p>
 <p>lines:</p>
 <p>Name: Pwquality password strength checking</p>
-<p>Default: yes</p>
+<p>默认值：yes</p>
 <p>Priority: 1024</p>
 <p>Conflicts: cracklib</p>
 <p>Password-Type: Primary</p>
@@ -24757,7 +24757,7 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>运行以下命令来验证that pam_pwhistory.so is enabled：</p>
 <p># grep -P -- &#x27;\bpam_pwhistory\.so\b&#x27; /etc/pam.d/common-password</p>
-<p>Output should be similar to:</p>
+<p>输出应类似于：</p>
 <p>password   requisite   pam_pwhistory.so remember=24 enforce_for_root</p>
 <p>use_authtok</p></div>
   </div>
@@ -24766,7 +24766,7 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
     <div class="part-content"><p>Run the following script to verify the pam_pwhistory.so line exists in a pam-auth-</p>
 <p>update profile:</p>
 <p># grep -P -- &#x27;\bpam_pwhistory\.so\b&#x27; /usr/share/pam-configs/*</p>
-<p>Output should be similar to:</p>
+<p>输出应类似于：</p>
 <p>/usr/share/pam-configs/pwhistory:   requisite   pam_pwhistory.so remember=24</p>
 <p>enforce_for_root use_authtok</p>
 <li>IF - similar output is returned:</li>
@@ -24778,7 +24778,7 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <li>IF - similar output is NOT returned:</li>
 <p>Create a pwhistory profile in /usr/share/pam-configs/ with the following lines:</p>
 <p>Name: pwhistory password history checking</p>
-<p>Default: yes</p>
+<p>默认值：yes</p>
 <p>Priority: 1024</p>
 <p>Password-Type: Primary</p>
 <p>Password: requisite pam_pwhistory.so remember=24 enforce_for_root use_authtok</p>
@@ -25339,18 +25339,18 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <p>•</p>
 <p>settings should be configured in only one location for clarity</p>
 <p>•</p>
-<p>Settings observe an order of precedence:</p>
-<li class="sub">module arguments override the settings in the</li>
-<p>/etc/security/pwquality.conf configuration file</p>
-<li class="sub">settings in the /etc/security/pwquality.conf configuration file</li>
-<p>override settings in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory</p>
-<li class="sub">settings in a .conf file in the /etc/security/pwquality.conf.d/</li>
-<p>directory are read in canonical order, with last read file containing the</p>
-<p>setting taking precedence</p>
+<p>设置遵循优先级顺序：</p>
+<li class="sub">模块参数覆盖</li>
+<p>/etc/security/pwquality.conf 配置文件中的设置</p>
+<li class="sub">/etc/security/pwquality.conf 配置文件中的设置</li>
+<p>覆盖以下目录中 .conf 文件的设置</p>
+<p>/etc/security/pwquality.conf.d/ 目录</p>
+<li class="sub">/etc/security/pwquality.conf.d/ 目录中 .conf 文件的设置</li>
+<p>按规范顺序读取，最后读取的包含该</p>
+<p>设置的文件优先</p>
 <p>•</p>
 <p>It is recommended that settings be configured in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory for clarity, convenience, and</p>
+<p>/etc/security/pwquality.conf.d/ 目录 for clarity, convenience, and</p>
 <p>durability.</p></div>
   </div>
   <div class="rec-part">
@@ -25462,18 +25462,18 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <p>•</p>
 <p>settings should be configured in only one location for clarity</p>
 <p>•</p>
-<p>Settings observe an order of precedence:</p>
-<li class="sub">module arguments override the settings in the</li>
-<p>/etc/security/pwquality.conf configuration file</p>
-<li class="sub">settings in the /etc/security/pwquality.conf configuration file</li>
-<p>override settings in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory</p>
-<li class="sub">settings in a .conf file in the /etc/security/pwquality.conf.d/</li>
-<p>directory are read in canonical order, with last read file containing the</p>
-<p>setting taking precedence</p>
+<p>设置遵循优先级顺序：</p>
+<li class="sub">模块参数覆盖</li>
+<p>/etc/security/pwquality.conf 配置文件中的设置</p>
+<li class="sub">/etc/security/pwquality.conf 配置文件中的设置</li>
+<p>覆盖以下目录中 .conf 文件的设置</p>
+<p>/etc/security/pwquality.conf.d/ 目录</p>
+<li class="sub">/etc/security/pwquality.conf.d/ 目录中 .conf 文件的设置</li>
+<p>按规范顺序读取，最后读取的包含该</p>
+<p>设置的文件优先</p>
 <p>•</p>
 <p>It is recommended that settings be configured in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory for clarity, convenience, and</p>
+<p>/etc/security/pwquality.conf.d/ 目录 for clarity, convenience, and</p>
 <p>durability.</p></div>
   </div>
   <div class="rec-part">
@@ -25612,18 +25612,18 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <p>•</p>
 <p>settings should be configured in only one location for clarity</p>
 <p>•</p>
-<p>Settings observe an order of precedence:</p>
-<li class="sub">module arguments override the settings in the</li>
-<p>/etc/security/pwquality.conf configuration file</p>
-<li class="sub">settings in the /etc/security/pwquality.conf configuration file</li>
-<p>override settings in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory</p>
-<li class="sub">settings in a .conf file in the /etc/security/pwquality.conf.d/</li>
-<p>directory are read in canonical order, with last read file containing the</p>
-<p>setting taking precedence</p>
+<p>设置遵循优先级顺序：</p>
+<li class="sub">模块参数覆盖</li>
+<p>/etc/security/pwquality.conf 配置文件中的设置</p>
+<li class="sub">/etc/security/pwquality.conf 配置文件中的设置</li>
+<p>覆盖以下目录中 .conf 文件的设置</p>
+<p>/etc/security/pwquality.conf.d/ 目录</p>
+<li class="sub">/etc/security/pwquality.conf.d/ 目录中 .conf 文件的设置</li>
+<p>按规范顺序读取，最后读取的包含该</p>
+<p>设置的文件优先</p>
 <p>•</p>
 <p>It is recommended that settings be configured in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory for clarity, convenience, and</p>
+<p>/etc/security/pwquality.conf.d/ 目录 for clarity, convenience, and</p>
 <p>durability.</p></div>
   </div>
   <div class="rec-part">
@@ -25756,18 +25756,18 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <p>•</p>
 <p>settings should be configured in only one location for clarity</p>
 <p>•</p>
-<p>Settings observe an order of precedence:</p>
-<li class="sub">module arguments override the settings in the</li>
-<p>/etc/security/pwquality.conf configuration file</p>
-<li class="sub">settings in the /etc/security/pwquality.conf configuration file</li>
-<p>override settings in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory</p>
-<li class="sub">settings in a .conf file in the /etc/security/pwquality.conf.d/</li>
-<p>directory are read in canonical order, with last read file containing the</p>
-<p>setting taking precedence</p>
+<p>设置遵循优先级顺序：</p>
+<li class="sub">模块参数覆盖</li>
+<p>/etc/security/pwquality.conf 配置文件中的设置</p>
+<li class="sub">/etc/security/pwquality.conf 配置文件中的设置</li>
+<p>覆盖以下目录中 .conf 文件的设置</p>
+<p>/etc/security/pwquality.conf.d/ 目录</p>
+<li class="sub">/etc/security/pwquality.conf.d/ 目录中 .conf 文件的设置</li>
+<p>按规范顺序读取，最后读取的包含该</p>
+<p>设置的文件优先</p>
 <p>•</p>
 <p>It is recommended that settings be configured in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory for clarity, convenience, and</p>
+<p>/etc/security/pwquality.conf.d/ 目录 for clarity, convenience, and</p>
 <p>durability.</p></div>
   </div>
   <div class="rec-part">
@@ -25867,18 +25867,18 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <p>•</p>
 <p>settings should be configured in only one location for clarity</p>
 <p>•</p>
-<p>Settings observe an order of precedence:</p>
-<li class="sub">module arguments override the settings in the</li>
-<p>/etc/security/pwquality.conf configuration file</p>
-<li class="sub">settings in the /etc/security/pwquality.conf configuration file</li>
-<p>override settings in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory</p>
-<li class="sub">settings in a .conf file in the /etc/security/pwquality.conf.d/</li>
-<p>directory are read in canonical order, with last read file containing the</p>
-<p>setting taking precedence</p>
+<p>设置遵循优先级顺序：</p>
+<li class="sub">模块参数覆盖</li>
+<p>/etc/security/pwquality.conf 配置文件中的设置</p>
+<li class="sub">/etc/security/pwquality.conf 配置文件中的设置</li>
+<p>覆盖以下目录中 .conf 文件的设置</p>
+<p>/etc/security/pwquality.conf.d/ 目录</p>
+<li class="sub">/etc/security/pwquality.conf.d/ 目录中 .conf 文件的设置</li>
+<p>按规范顺序读取，最后读取的包含该</p>
+<p>设置的文件优先</p>
 <p>•</p>
 <p>It is recommended that settings be configured in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory for clarity, convenience, and</p>
+<p>/etc/security/pwquality.conf.d/ 目录 for clarity, convenience, and</p>
 <p>durability.</p></div>
   </div>
   <div class="rec-part">
@@ -25969,18 +25969,18 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <p>不应返回任何内容</p>
 <p>注意：</p>
 <p>•</p>
-<p>Settings observe an order of precedence:</p>
-<li class="sub">module arguments override the settings in the</li>
-<p>/etc/security/pwquality.conf configuration file</p>
-<li class="sub">settings in the /etc/security/pwquality.conf configuration file</li>
-<p>override settings in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory</p>
-<li class="sub">settings in a .conf file in the /etc/security/pwquality.conf.d/</li>
-<p>directory are read in canonical order, with last read file containing the</p>
-<p>setting taking precedence</p>
+<p>设置遵循优先级顺序：</p>
+<li class="sub">模块参数覆盖</li>
+<p>/etc/security/pwquality.conf 配置文件中的设置</p>
+<li class="sub">/etc/security/pwquality.conf 配置文件中的设置</li>
+<p>覆盖以下目录中 .conf 文件的设置</p>
+<p>/etc/security/pwquality.conf.d/ 目录</p>
+<li class="sub">/etc/security/pwquality.conf.d/ 目录中 .conf 文件的设置</li>
+<p>按规范顺序读取，最后读取的包含该</p>
+<p>设置的文件优先</p>
 <p>•</p>
 <p>It is recommended that settings be configured in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory for clarity, convenience, and</p>
+<p>/etc/security/pwquality.conf.d/ 目录 for clarity, convenience, and</p>
 <p>durability.</p></div>
   </div>
   <div class="rec-part">
@@ -26077,7 +26077,7 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <p>Edit any returned files and remove the enforcing=0 argument from the</p>
 <p>pam_pwquality.so line(s)</p>
 <p>Edit /etc/security/pwquality.conf and all files ending in .conf in the</p>
-<p>/etc/security/pwquality.conf.d/ directory and remove or comment out any line</p>
+<p>/etc/security/pwquality.conf.d/ 目录 and remove or comment out any line</p>
 <p>containing the enforcing = 0 argument:</p>
 <p>示例：</p>
 <pre><code># sed -ri &#x27;s/^\s*enforcing\s*=\s*0/# &amp;/&#x27; /etc/security/pwquality.conf 
@@ -26153,18 +26153,18 @@ for the system using pre-defined profiles as supplied by PAM module packages.</c
 <p>/etc/security/pwquality.conf.d/50-pwroot.conf:enforce_for_root</p>
 <p>注意：</p>
 <p>•</p>
-<p>Settings observe an order of precedence:</p>
-<li class="sub">module arguments override the settings in the</li>
-<p>/etc/security/pwquality.conf configuration file</p>
-<li class="sub">settings in the /etc/security/pwquality.conf configuration file</li>
-<p>override settings in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory</p>
-<li class="sub">settings in a .conf file in the /etc/security/pwquality.conf.d/</li>
-<p>directory are read in canonical order, with last read file containing the</p>
-<p>setting taking precedence</p>
+<p>设置遵循优先级顺序：</p>
+<li class="sub">模块参数覆盖</li>
+<p>/etc/security/pwquality.conf 配置文件中的设置</p>
+<li class="sub">/etc/security/pwquality.conf 配置文件中的设置</li>
+<p>覆盖以下目录中 .conf 文件的设置</p>
+<p>/etc/security/pwquality.conf.d/ 目录</p>
+<li class="sub">/etc/security/pwquality.conf.d/ 目录中 .conf 文件的设置</li>
+<p>按规范顺序读取，最后读取的包含该</p>
+<p>设置的文件优先</p>
 <p>•</p>
 <p>It is recommended that settings be configured in a .conf file in the</p>
-<p>/etc/security/pwquality.conf.d/ directory for clarity, convenience, and</p>
+<p>/etc/security/pwquality.conf.d/ 目录 for clarity, convenience, and</p>
 <p>durability.</p></div>
   </div>
   <div class="rec-part">
@@ -26284,7 +26284,7 @@ file=/tmp/opasswd</code></pre>
     <div class="part-content"><p>Requiring users not to reuse their passwords make it less likely that an attacker will be</p>
 <p>able to guess the password or use a compromised password.</p>
 <p>Note: These changes only apply to accounts configured on the local</p>
-<p>system.</p></div>
+<p>系统。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
@@ -26303,7 +26303,7 @@ file=/tmp/opasswd</code></pre>
 <p>•</p>
 <p>The value meets local site policy</p>
 <p># grep -P -- &#x27;\bpam_pwhistory\.so\b&#x27; /etc/pam.d/common-password</p>
-<p>Output should be similar to:</p>
+<p>输出应类似于：</p>
 <p>password   requisite   pam_pwhistory.so remember=24 enforce_for_root</p>
 <p>use_authtok</p>
 <p>注意：</p>
@@ -26390,7 +26390,7 @@ done
     <div class="part-content"><p>Requiring users not to reuse their passwords make it less likely that an attacker will be</p>
 <p>able to guess the password or use a compromised password</p>
 <p>Note: These changes only apply to accounts configured on the local</p>
-<p>system.</p></div>
+<p>系统。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
@@ -26405,7 +26405,7 @@ done
 <p># grep -Psi --</p>
 <p>&#x27;^\h*password\h+[^#\n\r]+\h+pam_pwhistory\.so\h+([^#\n\r]+\h+)?enforce_for_ro</p>
 <p>ot\b&#x27; /etc/pam.d/common-password</p>
-<p>Output should be similar to:</p>
+<p>输出应类似于：</p>
 <p>password   requisite   pam_pwhistory.so remember=24 enforce_for_root</p>
 <p>use_authtok</p>
 <p>注意：</p>
@@ -26507,7 +26507,7 @@ done
 <p># grep -Psi --</p>
 <p>&#x27;^\h*password\h+[^#\n\r]+\h+pam_pwhistory\.so\h+([^#\n\r]+\h+)?use_authtok\b&#x27;</p>
 <p>/etc/pam.d/common-password</p>
-<p>Output should be similar to:</p>
+<p>输出应类似于：</p>
 <p>password   requisite   pam_pwhistory.so remember=24 enforce_for_root</p>
 <p>use_authtok</p>
 <p>注意：</p>
@@ -26617,7 +26617,7 @@ done
 <p>Edit any files returned and remove the nullok argument for the pam_unix lines</p>
 <p>Example File:</p>
 <p>Name: Unix authentication</p>
-<p>Default: yes</p>
+<p>默认值：yes</p>
 <p>Priority: 256</p>
 <p>Auth-Type: Primary</p>
 <p>Auth:</p>
@@ -26808,7 +26808,7 @@ done
 <p># grep -PH --</p>
 <p>&#x27;^\h*password\h+([^#\n\r]+)\h+pam_unix\.so\h+([^#\n\r]+\h+)?(sha512|yescrypt)</p>
 <p>\b&#x27; /etc/pam.d/common-password</p>
-<p>Output should be similar to:</p>
+<p>输出应类似于：</p>
 <p>/etc/pam.d/common-password:password   [success=1 default=ignore]</p>
 <p>pam_unix.so obscure use_authtok try_first_pass yescrypt</p>
 <p>Verify that the line(s) include either sha512 - OR - yescrypt</p></div>
@@ -26822,7 +26822,7 @@ done
 <p>yescrypt, that meets local site policy to the pam_unix lines in the Password section:</p>
 <p>Example File:</p>
 <p>Name: Unix authentication</p>
-<p>Default: yes</p>
+<p>默认值：yes</p>
 <p>Priority: 256</p>
 <p>Auth-Type: Primary # &lt;- Start of &quot;Auth&quot; section</p>
 <p>Auth:</p>
@@ -26914,7 +26914,7 @@ done
 <p># grep -PH --</p>
 <p>&#x27;^\h*password\h+([^#\n\r]+)\h+pam_unix\.so\h+([^#\n\r]+\h+)?use_authtok\b&#x27;</p>
 <p>/etc/pam.d/common-password</p>
-<p>Output should be similar to:</p>
+<p>输出应类似于：</p>
 <p>/etc/pam.d/common-password:password   [success=1 default=ignore]</p>
 <p>pam_unix.so obscure use_authtok try_first_pass yescrypt</p>
 <p>Verify that the line(s) include use_authtok</p></div>
@@ -26931,7 +26931,7 @@ done
 <p>subsection</p>
 <p>Example File:</p>
 <p>Name: Unix authentication</p>
-<p>Default: yes</p>
+<p>默认值：yes</p>
 <p>Priority: 256</p>
 <p>Auth-Type: Primary # &lt;- Start of &quot;Auth&quot; section</p>
 <p>Auth:</p>
@@ -27665,9 +27665,9 @@ done
   </div>
   <div class="rec-part">
     <h4 class="part-label">修复措施</h4>
-    <div class="part-content"><p>运行以下命令来set the root user&#x27;s GID to 0：</p>
+    <div class="part-content"><p>运行以下命令来set the root user's GID to 0：</p>
 <pre><code># usermod -g 0 root</code></pre>
-<p>运行以下命令来set the root group&#x27;s GID to 0：</p>
+<p>运行以下命令来set the root group's GID to 0：</p>
 <pre><code># groupmod -g 0 root</code></pre>
 <p>Remove any users other than the root user with GID 0 or assign them a new GID if</p>
 <p>appropriate.</p></div>
@@ -27729,7 +27729,7 @@ done
   </div>
   <div class="rec-part">
     <h4 class="part-label">修复措施</h4>
-    <div class="part-content"><p>运行以下命令来set the root group&#x27;s GID to 0：</p>
+    <div class="part-content"><p>运行以下命令来set the root group's GID to 0：</p>
 <pre><code># groupmod -g 0 root</code></pre>
 <p>Remove any groups other than the root group with GID 0 or assign them a new GID if</p>
 <p>appropriate.</p></div>
@@ -27859,7 +27859,7 @@ done
   </div>
   <div class="rec-part">
     <h4 class="part-label">审计</h4>
-    <div class="part-content"><p>运行以下脚本来verify root&#x27;s path does not include：</p>
+    <div class="part-content"><p>运行以下脚本来verify root's path does not include：</p>
 <p>•</p>
 <p>Locations that are not directories</p>
 <p>•</p>
@@ -28808,7 +28808,7 @@ then
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>运行以下命令来验证systemd-journald is active：</p>
 <pre><code># systemctl is-active systemd-journald.service</code></pre>
-<p>active</p></div>
+<p>活跃</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">修复措施</h4>
@@ -29630,10 +29630,10 @@ fi
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>Run the following command to verify systemd-journal-upload is enabled.</p>
 <pre><code># systemctl is-enabled systemd-journal-upload.service</code></pre>
-<p>enabled</p>
+<p>已启用</p>
 <p>运行以下命令来验证systemd-journal-upload is active：</p>
 <pre><code># systemctl is-active systemd-journal-upload.service</code></pre>
-<p>active</p></div>
+<p>活跃</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">修复措施</h4>
@@ -29881,10 +29881,10 @@ fi
     <div class="part-content"><li>IF - rsyslog is being used for logging on the system:</li>
 <p>运行以下命令来验证rsyslog.service is enabled：</p>
 <pre><code># systemctl is-enabled rsyslog</code></pre>
-<p>enabled</p>
+<p>已启用</p>
 <p>运行以下命令来验证rsyslog.service is active：</p>
 <pre><code># systemctl is-active rsyslog.service</code></pre>
-<p>active</p></div>
+<p>活跃</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">修复措施</h4>
@@ -29992,7 +29992,7 @@ fi
 <p>Run the following command to verify systemd-journald.service and</p>
 <p>rsyslog.service are loaded and active:</p>
 <pre><code># systemctl list-units --type service | grep -P -- &#x27;(journald|rsyslog)&#x27;</code></pre>
-<p>Output should be similar to:</p>
+<p>输出应类似于：</p>
 <p>rsyslog.service                                       loaded active running</p>
 <p>System Logging Service</p>
 <p>systemd-journald.service                              loaded active running</p>
@@ -31115,11 +31115,11 @@ l_agroup=&quot;(root|adm)&quot;
     <h4 class="part-label">审计</h4>
     <div class="part-content"><p>运行以下命令来验证auditd is enabled：</p>
 <pre><code># systemctl is-enabled auditd | grep &#x27;^enabled&#x27;</code></pre>
-<p>enabled</p>
+<p>已启用</p>
 <p>Verify result is &quot;enabled&quot;.</p>
 <p>运行以下命令来验证auditd is active：</p>
 <pre><code># systemctl is-active auditd | grep &#x27;^active&#x27;</code></pre>
-<p>active</p>
+<p>活跃</p>
 <p>Verify result is active</p></div>
   </div>
   <div class="rec-part">
@@ -32123,7 +32123,7 @@ path=/var/run/faillock -F perm=wa -k logins</code></pre></div>
 <p>该类型访问的特定系统调用。不提供 arch 将导致选择所有系统</p>
 <p>调用，这会影响性能，因为所有系统调用都会被评估。</p>
 <p class="step">1. Edit the file /etc/sudoers or a file in /etc/sudoers.d/ with visudo -f &lt;PATH</p>
-<p>TO FILE&gt; and 添加以下行：</p>
+<p>TO FILE> and 添加以下行：</p>
 <p>Defaults logfile=&quot;&lt;PATH TO CUSTOM LOG FILE&gt;&quot;</p>
 <p>示例：</p>
 <p>Defaults logfile=&quot;/var/log/sudo.log&quot;</p>
@@ -32217,7 +32217,7 @@ path=/var/run/faillock -F perm=wa -k logins</code></pre></div>
 <p>修复措施。</p>
 <p>运行以下命令来验证a rule exits in the running configuration：</p>
 <p>1a. Verify a rule exists for adjtimex, settimeofday, clock_settime in the running</p>
-<p>configuration:</p>
+<p>配置：</p>
 <pre><code># auditctl -l | grep -Ps -- &#x27;(adjtimex|settimeofday|clock_settime)&#x27;</code></pre>
 <p>Verify output of matches:</p>
 <p>-a always,exit -S adjtimex,settimeofday</p>
@@ -33071,7 +33071,7 @@ arch=b64 -S all -F dir=/etc/netplan/ -F perm=wa -k system-locale</code></pre></d
 <p>-a always,exit -F arch=b64 -S creat,open,openat,truncate,ftruncate -F exit=-</p>
 <p>EPERM -F auid&gt;=1000 -F auid!=unset -k access</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-access.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">3. Merge and load the rules into active configuration:</p>
 <p># augenrules --load</p>
@@ -33179,7 +33179,7 @@ arch=b64 -S all -F dir=/etc/netplan/ -F perm=wa -k system-locale</code></pre></d
 <p>调用，这会影响性能，因为所有系统调用都会被评估。</p>
 <p class="step">1. 编辑或创建 /etc/audit/rules.d/ 目录中以 .rules 结尾的文件</p>
 <p>extension, with the relevant rules to monitor events that modify user/group</p>
-<p>information.</p>
+<p>信息。</p>
 <p>示例：</p>
 <pre><code># printf &quot;</code></pre>
 <p>-a always,exit -F arch=b64 -S all -F path=/etc/group -F perm=wa -k identity</p>
@@ -33294,7 +33294,7 @@ arch=b64 -S all -F dir=/etc/netplan/ -F perm=wa -k system-locale</code></pre></d
 <p>调用，这会影响性能，因为所有系统调用都会被评估。</p>
 <p class="step">1. 编辑或创建 /etc/audit/rules.d/ 目录中以 .rules 结尾的文件</p>
 <p>extension, with the relevant rules to monitor events that modify user/group</p>
-<p>information.</p>
+<p>信息。</p>
 <p>示例：</p>
 <pre><code># printf &quot;</code></pre>
 <p>-a always,exit -F arch=b64 -S all -F path=/etc/passwd -F perm=wa -k identity</p>
@@ -33414,7 +33414,7 @@ path=/etc/shadow -F perm=wa -k identity</code></pre></div>
 <p>调用，这会影响性能，因为所有系统调用都会被评估。</p>
 <p class="step">1. 编辑或创建 /etc/audit/rules.d/ 目录中以 .rules 结尾的文件</p>
 <p>extension, with the relevant rules to monitor events that modify user/group</p>
-<p>information.</p>
+<p>信息。</p>
 <p>示例：</p>
 <pre><code># printf &quot;</code></pre>
 <p>-a always,exit -F arch=b64 -S all -F path=/etc/gshadow -F perm=wa -k identity</p>
@@ -33537,7 +33537,7 @@ path=/etc/shadow -F perm=wa -k identity</code></pre></div>
 <p>调用，这会影响性能，因为所有系统调用都会被评估。</p>
 <p class="step">1. 编辑或创建 /etc/audit/rules.d/ 目录中以 .rules 结尾的文件</p>
 <p>extension, with the relevant rules to monitor events that modify user/group</p>
-<p>information.</p>
+<p>信息。</p>
 <p>示例：</p>
 <pre><code># printf &quot;</code></pre>
 <p>-a always,exit -F arch=b64 -S all -F path=/etc/security/opasswd -F perm=wa -k</p>
@@ -33654,7 +33654,7 @@ path=/etc/shadow -F perm=wa -k identity</code></pre></div>
 <p>调用，这会影响性能，因为所有系统调用都会被评估。</p>
 <p class="step">1. 编辑或创建 /etc/audit/rules.d/ 目录中以 .rules 结尾的文件</p>
 <p>extension, with the relevant rules to monitor events that modify user/group</p>
-<p>information.</p>
+<p>信息。</p>
 <p>示例：</p>
 <pre><code># printf &quot;</code></pre>
 <p>-a always,exit -F arch=b64 -S all -F path=/etc/nsswitch.conf -F perm=wa -k</p>
@@ -33772,7 +33772,7 @@ dir=/etc/pam.d -F perm=wa -k identity</code></pre></div>
 <p>调用，这会影响性能，因为所有系统调用都会被评估。</p>
 <p class="step">1. 编辑或创建 /etc/audit/rules.d/ 目录中以 .rules 结尾的文件</p>
 <p>extension, with the relevant rules to monitor events that modify user/group</p>
-<p>information.</p>
+<p>信息。</p>
 <p>示例：</p>
 <pre><code># printf &quot;</code></pre>
 <p>-a always,exit -F arch=b64 -S all -F path=/etc/pam.conf -F perm=wa -k</p>
@@ -33898,7 +33898,7 @@ dir=/etc/pam.d -F perm=wa -k identity</code></pre></div>
 <p>-a always,exit -F arch=b64 -S chmod,fchmod,fchmodat,fchmodat2 -F auid&gt;=1000 -</p>
 <p>F auid!=unset -k perm_mod</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-perm_mod.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -34026,7 +34026,7 @@ dir=/etc/pam.d -F perm=wa -k identity</code></pre></div>
 <p>-a always,exit -F arch=b64 -S chown,fchown,lchown,fchownat -F auid&gt;=1000 -F</p>
 <p>auid!=unset -k perm_mod</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-perm_mod.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -34161,7 +34161,7 @@ dir=/etc/pam.d -F perm=wa -k identity</code></pre></div>
 <p>setxattr,lsetxattr,fsetxattr,removexattr,lremovexattr,fremovexattr -F</p>
 <p>auid&gt;=1000 -F auid!=unset -k perm_mod</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-perm_mod.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -34283,7 +34283,7 @@ dir=/etc/pam.d -F perm=wa -k identity</code></pre></div>
 <pre><code># printf &quot;</code></pre>
 <p>-a always,exit -F arch=b64 -S mount -F auid&gt;=1000 -F auid!=unset -k mounts</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-mounts.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -34651,7 +34651,7 @@ path=/var/run/faillock -F perm=wa -k logins</code></pre></div>
 <p>-a always,exit -F arch=b64 -S unlink,unlinkat -F auid&gt;=1000 -F auid!=unset -k</p>
 <p>delete</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-delete.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -34774,7 +34774,7 @@ path=/var/run/faillock -F perm=wa -k logins</code></pre></div>
 <p>-a always,exit -F arch=b64 -S rename,renameat,renameat2 -F auid&gt;=1000 -F</p>
 <p>auid!=unset -k delete</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-delete.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -34993,7 +34993,7 @@ dir=/etc/apparmor.d -F perm=wa -k MAC-policy</code></pre></div>
 <p>-a always,exit -F arch=b64 -S all -F path=/usr/bin/chcon -F perm=x -F</p>
 <p>auid&gt;=1000 -F auid!=unset -k perm_chng</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-perm_chng.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -35102,7 +35102,7 @@ dir=/etc/apparmor.d -F perm=wa -k MAC-policy</code></pre></div>
 <p>-a always,exit -F arch=b64 -S all -F path=/usr/bin/setfacl -F perm=x -F</p>
 <p>auid&gt;=1000 -F auid!=unset -k perm_chng</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-perm_chng.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -35215,7 +35215,7 @@ dir=/etc/apparmor.d -F perm=wa -k MAC-policy</code></pre></div>
 <p>-a always,exit -F arch=b64 -S all -F path=/usr/bin/chacl -F perm=x -F</p>
 <p>auid&gt;=1000 -F auid!=unset -k perm_chng</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-perm_chng.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -35329,7 +35329,7 @@ dir=/etc/apparmor.d -F perm=wa -k MAC-policy</code></pre></div>
 <p>-a always,exit -F arch=b64 -S all -F path=/usr/sbin/usermod -F perm=x -F</p>
 <p>auid&gt;=1000 -F auid!=unset -k usermod</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-usermod.rules unset</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -35573,7 +35573,7 @@ dir=/etc/apparmor.d -F perm=wa -k MAC-policy</code></pre></div>
 <p>-a always,exit -F arch=b64 -S init_module,finit_module -F auid&gt;=1000 -F</p>
 <p>auid!=unset -k kernel_modules</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-kernel_modules.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -35696,7 +35696,7 @@ dir=/etc/apparmor.d -F perm=wa -k MAC-policy</code></pre></div>
 <p>-a always,exit -F arch=b64 -S delete_module -F auid&gt;=1000 -F auid!=unset -k</p>
 <p>kernel_modules</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-kernel_modules.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p>2.Merge and load the rules into active configuration:</p>
 <p># augenrules --load</p>
@@ -35820,7 +35820,7 @@ dir=/etc/apparmor.d -F perm=wa -k MAC-policy</code></pre></div>
 <p>-a always,exit -F arch=b64 -S query_module -F auid&gt;=1000 -F auid!=unset -k</p>
 <p>kernel_modules</p>
 <p>&quot; &gt;&gt; /etc/audit/rules.d/50-kernel_modules.rules</p>
-<p>Note: The auid&gt;= value should be set to the same value as UID_MIN value in</p>
+<p>注意：auid>= 的值应设置为与</p>
 <p>/etc/login.defs.</p>
 <p class="step">2. 合并规则并加载到活跃配置中：</p>
 <p># augenrules --load</p>
@@ -37017,7 +37017,7 @@ aide-common is installed</code></pre></div>
 <p>static or enabled.</p>
 <p>运行以下命令来验证dailyaidecheck.timer is active：</p>
 <pre><code># systemctl is-active dailyaidecheck.timer</code></pre>
-<p>active</p></div>
+<p>活跃</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">修复措施</h4>
@@ -37481,7 +37481,7 @@ aide-common is installed</code></pre></div>
   <div class="rec-part">
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The /etc/group- file contains a backup list of all the valid groups defined in the</p>
-<p>system.</p></div>
+<p>系统。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -37550,7 +37550,7 @@ aide-common is installed</code></pre></div>
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The /etc/shadow file is used to store the information about user accounts that is critical</p>
 <p>to the security of those accounts, such as the hashed password and other security</p>
-<p>information.</p></div>
+<p>信息。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -37697,7 +37697,7 @@ aide-common is installed</code></pre></div>
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The /etc/gshadow file is used to store the information about groups that is critical to</p>
 <p>the security of those accounts, such as the hashed password and other security</p>
-<p>information.</p></div>
+<p>信息。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -37771,7 +37771,7 @@ aide-common is installed</code></pre></div>
     <h4 class="part-label">描述</h4>
     <div class="part-content"><p>The /etc/gshadow- file is used to store backup information about groups that is critical</p>
 <p>to the security of those accounts, such as the hashed password and other security</p>
-<p>information.</p></div>
+<p>信息。</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
@@ -37997,14 +37997,14 @@ aide-common is installed</code></pre></div>
 <p>compromised by any user on the system. World writable files may also indicate an</p>
 <p>incorrectly written script or program that could potentially be the cause of a larger</p>
 <p>compromise to the system&#x27;s integrity. See the chmod(2) man page for more</p>
-<p>information.</p>
+<p>信息。</p>
 <p>Setting the sticky bit on world writable directories prevents users from deleting or</p>
 <p>renaming files in that directory that are not owned by them.</p></div>
   </div>
   <div class="rec-part">
     <h4 class="part-label">理由</h4>
     <div class="part-content"><p>Data in world-writable files can be modified and compromised by any user on the</p>
-<p>system. World writable files may also indicate an incorrectly written script or program</p>
+<p>系统。 World writable files may also indicate an incorrectly written script or program</p>
 <p>that could potentially be the cause of a larger compromise to the system&#x27;s integrity.</p>
 <p>This feature prevents the ability to delete or rename files in world writable directories</p>
 <p>(such as /tmp ) that are owned by another user.</p></div>
